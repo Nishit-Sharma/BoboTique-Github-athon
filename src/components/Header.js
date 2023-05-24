@@ -1,8 +1,17 @@
 import React from 'react'
 import './Global.css';
+import Home from './Home.js'
 
 function Header() {
+  const [showHome, setShowHome] = useState(false);
 
+  const handleHomeClick = () => {
+    setShowHome(true);
+  }
+
+  if (showStore1) {
+    return <Home></Home>;
+  }
 
     return (
       <header>
