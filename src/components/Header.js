@@ -24,7 +24,6 @@ function Header() {
           <ul>
             <li><Link to="/">Home Switch</Link></li>
             {/* <li><a href="#" onClick={handleHomeClick}>Home</a></li> */}
-            <li><a href="#">Cart</a></li>
             <li><Link to="/cart">Cart</Link></li>
           </ul>
         </nav>
