@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import Store1 from './components/Store1/Store.js'
 import Store2 from './components/Store2/Store2.js'
 import Store3 from './components/Store3/Store3.js'
