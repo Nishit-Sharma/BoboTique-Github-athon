@@ -4,8 +4,7 @@ import Store2 from './Store2/Store2.js'
 import Store3 from './Store3/Store3.js'
 import Store4 from './Store4/Store4.js'
 import './Global.css';
-import Header from './Header.js';
-import Footer from './Footer.js';
+import Layout from './Layout.js';
 
 function Home() {
   const [showStore1, setShowStore1] = useState(false);
@@ -47,7 +46,7 @@ function Home() {
 
   return (
     <div>
-      <Header />
+      <Layout>
       <h1>Welcome to our shopping website!</h1>
       <p>Choose from our four malls to start shopping:</p>
       <ul>
@@ -60,7 +59,7 @@ function Home() {
         <input type="text" placeholder="Search for products" />
         <button type="submit">Search</button>
       </form>
-      <Footer />
+      </Layout>
     </div>
   );
 

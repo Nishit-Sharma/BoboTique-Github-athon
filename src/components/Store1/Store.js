@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from '../Header.js'; 
+import Layout from '../Layout.js'; 
 
 function Store() {
   return (
     <div>
-      <Header />
+      <Layout>
       <h2>Store Name</h2>
       <ul>
         <li>
@@ -28,6 +28,7 @@ function Store() {
           <p>$40.00</p>
         </li>
       </ul>
+      </Layout>
     </div>
   );
 }
