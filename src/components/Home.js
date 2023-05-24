@@ -46,7 +46,7 @@ function Home() {
     return <Store4></Store4>;
   }
 
-  return <Navbar />
+  return <Navbar />;
 
   return (
     <div>
