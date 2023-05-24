@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Global.css';
 import Home from './Home.js'
 
@@ -20,6 +21,7 @@ function Header() {
         </div>
         <nav>
           <ul>
+            <li><Link to="/">Home Switch</Link></li>
             <li><a href="#" onClick={handleHomeClick}>Home</a></li>
             <li><a href="#">Cart</a></li>
           </ul>
