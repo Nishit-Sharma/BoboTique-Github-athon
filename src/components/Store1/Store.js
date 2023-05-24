@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../Layout.js'; 
 
-function Store() {
+const Store1 = () => {
+
+  useEffect(() => {
+    setShowStore1(true);
+  }, []);
+
   return (
     <div>
       <Layout>

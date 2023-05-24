@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Global.css';
 import Home from './Home.js'
 
-function Header() {
+const Header = ({ onHomeClick }) => {
     const [showHome, setShowHome] = useState(false);
 
     const handleHomeClick = () => {
@@ -16,11 +16,11 @@ function Header() {
     return (
       <header>
         <div className="logo">
-          <img onClick={handleHomeClick} src="logo.png" alt="Logo" />
+          <img onClick={onHomeClick} src="logo.png" alt="Logo" />
         </div>
         <nav>
           <ul>
-            <li><a onClick={handleHomeClick}>Home</a></li>
+            <li><a onClick={onHomeClick}>Home</a></li>
             <li><a href="#">Cart</a></li>
           </ul>
         </nav>

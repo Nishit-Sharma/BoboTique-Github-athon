@@ -1,11 +1,21 @@
+import React, { useState } from 'react';
+import Header from './Header';
+import Home from './Home';
+import Store1 from './components/Store1/Store1';
 
-import Home from "./components/Home.js";
-import './App.css';
-import './components/Global.css';
+const App = () => {
+  const [showStore1, setShowStore1] = useState(true);
 
+  const handleHomeClick = () => {
+    setShowStore1(false);
+  };
 
-function App() {
-  return <Home />
-}
+  return (
+    <div>
+      <Header onHomeClick={handleHomeClick} />
+      {showStore1 ? <Store1 /> : <Home />}
+    </div>
+  );
+};
 
 export default App;
