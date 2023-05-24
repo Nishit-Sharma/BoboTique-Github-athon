@@ -5,7 +5,7 @@ import './components/Global.css';
 
 
 function App() {
-  <Home />
+  return <Home />
 }
 
 export default App;
