@@ -6,7 +6,7 @@ import Store3 from './Store3/Store3.js'
 import Store4 from './Store4/Store4.js'
 
 function Home() {
-  const [showStore1, setShowStore1] =(false);
+  const [showStore1, setShowStore1] = useState(false);
   const [showStore2, setShowStore2] = useState(false);
   const [showStore3, setShowStore3] = useState(false);
   const [showStore4, setShowStore4] = useState(false);
