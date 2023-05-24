@@ -7,15 +7,14 @@ import './components/Global.css';
 
 
 function App() {
-  return (
-    <BrowserRouter>
+  <BrowserRouter>
     <div>
       <Routes>
         <Route exact path="/" component={<Home />} />
       </Routes>
     </div>
   </BrowserRouter>
-  );
+  return <Home />
 }
 
 export default App;
