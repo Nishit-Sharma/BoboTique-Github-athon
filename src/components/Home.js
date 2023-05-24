@@ -47,8 +47,6 @@ function Home() {
     return <Store4></Store4>;
   }
 
-  <NavBar></NavBar>;
-  <Header></Header>;
   return (
     <div>
       <h1>Welcome to our shopping website!</h1>
@@ -65,7 +63,7 @@ function Home() {
       </form>
     </div>
   );
-  <Footer></Footer>;
+
 }
 
 export default Home;
