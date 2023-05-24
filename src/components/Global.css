@@ -38,42 +38,42 @@ body {
   }
   
   /* Home */
-  .home {
+  .Home {
     text-align: center;
     padding: 50px;
   }
   
-  .home h1 {
+  .Home h1 {
     font-size: 36px;
     margin-bottom: 20px;
   }
   
-  .home p {
+  .Home p {
    font-size: 18px;
     margin-bottom: 20px;
   }
   
-  .home ul {
+  .Home ul {
     display: flex;
     justify-content: center;
   }
   
-  .home li {
+  .Home li {
     margin-right: 20px;
   }
   
-  .home form {
+  .Home form {
     margin-top: 50px;
   }
   
-  .home input[type="text"] {
+  .Home input[type="text"] {
     padding: 10px;
     border: none;
     border-radius: 5px;
     margin-right: 10px;
   }
   
-  .home button[type="submit"] {
+  .Home button[type="submit"] {
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
@@ -81,65 +81,45 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
-  
-  /* Mall */
-  .mall {
-    padding: 50px;
-  }
-  
-  .mall h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .mall ul {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .mall li {
-    margin-right: 20px;
-    margin-bottom: 20px;
-  }
-  
+
   /* Store */
-  .store {
+  .Store {
     padding: 50px;
   }
   
-  .store h2 {
+  .Store h2 {
     font-size: 36px;
     margin-bottom: 20px;
   }
   
-  .store ul {
+  .Store ul {
     display: flex;
     flex-wrap: wrap;
   }
   
-  .store li {
+  .Store li {
     margin-right: 20px;
     margin-bottom: 20px;
     width: 300px;
   }
   
-  .store img {
+  .Store img {
     max-width: 100%;
     height: auto;
    margin-bottom: 10px;
   }
   
-  .store h3 {
+  .Store h3 {
     font-size: 24px;
     margin-bottom: 10px;
   }
   
-  .store p {
+  .Store p {
     font-size: 18px;
     margin-bottom: 10px;
   }
   
-  .store button {
+  .Store button {
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
@@ -179,42 +159,42 @@ body {
   }
   
   /* Cart */
-  .cart {
+  .Cart {
     padding: 50px;
   }
   
-  .cart h2 {
+  .Cart h2 {
     font-size: 36px;
     margin-bottom: 20px;
   }
-  .cart ul {
+  .Cart ul {
     display: flex;
     flex-wrap: wrap;
   }
   
-  .cart li {
+  .Cart li {
     margin-right: 20px;
     margin-bottom: 20px;
     width: 300px;
   }
   
-  .cart img {
+  .Cart img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
   }
   
-  .cart h3 {
+  .Cart h3 {
     font-size: 24px;
     margin-bottom: 10px;
   }
   
-  .cart p {
+  .Cart p {
     font-size: 18px;
     margin-bottom: 10px;
   }
   
-  .cart button {
+  .Cart button {
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
@@ -223,17 +203,17 @@ body {
     cursor: pointer;
   }
   
-  .cart p:last-child {
+  .Cart p:last-child {
     font-weight: bold;
     margin-top: 20px;
   }
   
-  .cart button:last-child {
+  .Cart button:last-child {
     margin-top: 20px;
   }
   
   /* Footer */
-  footer {
+  Footer {
     text-align: center;
     padding: 20px;
     background-color: #f5f5f5;
