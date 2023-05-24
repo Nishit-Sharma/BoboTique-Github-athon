@@ -4,7 +4,7 @@ import './Global.css';
 function Footer() {
   return (
     <footer>
-      <p>&copy; 2023 My Website</p>
+      <p>Nishit, Brayden, Afnan, Vansh, Chris, Reihan</p>
     </footer>
   );
 }
