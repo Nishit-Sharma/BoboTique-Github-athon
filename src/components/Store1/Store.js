@@ -1,8 +1,10 @@
 import React from 'react';
+import Header from './components/Header.js'; 
 
 function Store() {
   return (
     <div>
+      <Header />
       <h2>Store Name</h2>
       <ul>
         <li>

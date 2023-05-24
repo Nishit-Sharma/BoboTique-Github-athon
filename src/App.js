@@ -6,7 +6,6 @@ import './components/Global.css';
 
 
 function App() {
-  <Header />
   return <Home />
 }
 
