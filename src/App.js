@@ -6,7 +6,7 @@ import './components/Global.css';
 
 
 function App() {
-  return <Home></Home>;
+  <Home />
 }
 
 export default App;

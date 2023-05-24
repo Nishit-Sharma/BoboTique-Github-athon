@@ -48,6 +48,7 @@ function Home() {
 
   return (
     <div>
+      <head></head>
       <h1>Welcome to our shopping website!</h1>
       <p>Choose from our four malls to start shopping:</p>
       <ul>
