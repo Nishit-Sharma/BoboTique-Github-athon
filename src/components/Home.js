@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Global.css';
 import Store1 from './Store1/Store.js'
 import Store2 from './Store2/Store2.js'
 import Store3 from './Store3/Store3.js'
