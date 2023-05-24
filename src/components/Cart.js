@@ -1,8 +1,10 @@
 import React from 'react';
 import './Global.css';
+import Layout from './Layout.js';
 
 function Cart() {
   return (
+    <Layout>
     <div>
       <h2>Shopping Cart</h2>
       <ul>
@@ -28,6 +30,7 @@ function Cart() {
       <p>Total: $60.00</p>
       <button>Checkout</button>
     </div>
+    </Layout>
   );
 }
 
