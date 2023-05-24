@@ -50,10 +50,10 @@ function Home() {
       <h1>Welcome to our shopping website!</h1>
       <p>Choose from our four malls to start shopping:</p>
       <ul>
-        <li><a href="#" onClick={handleStore1Click}>Mall 1</a></li>
-        <li><a href="#" onClick={handleStore2Click}>Mall 2</a></li>
-        <li><a href="#" onClick={handleStore3Click}>Mall 3</a></li>
-        <li><a href="#" onClick={handleStore4Click}>Mall 4</a></li>
+        <li><a onClick={handleStore1Click}>Mall 1</a></li>
+        <li><a onClick={handleStore2Click}>Mall 2</a></li>
+        <li><a onClick={handleStore3Click}>Mall 3</a></li>
+        <li><a onClick={handleStore4Click}>Mall 4</a></li>
       </ul>
       <form>
         <input type="text" placeholder="Search for products" />
