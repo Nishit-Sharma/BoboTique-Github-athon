@@ -10,7 +10,7 @@ const Header = ({ onHomeClick }) => {
     }
 
     if (showHome) {
-      return <Home></Home>;
+      return <Home />;
     }
 
     return (
