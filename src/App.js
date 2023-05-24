@@ -4,7 +4,7 @@ import GlobalStyles from './components/Global.css';
 import './App.css';
 
 function App() {
-  <GlobalStyles></GlobalStyles>;
+  //<GlobalStyles></GlobalStyles>;
   <Home></Home>;
 }
 

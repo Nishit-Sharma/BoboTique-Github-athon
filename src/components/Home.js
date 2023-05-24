@@ -5,6 +5,10 @@ import Store2 from './Store2/Store2.js'
 import Store3 from './Store3/Store3.js'
 import Store4 from './Store4/Store4.js'
 
+import NavBar from 'Navbar.js';
+import Header from 'Header.js';
+import Footer from 'Footer.js';
+
 function Home() {
   const [showStore1, setShowStore1] = useState(false);
   const [showStore2, setShowStore2] = useState(false);
@@ -43,6 +47,8 @@ function Home() {
     return <Store4></Store4>;
   }
 
+  <NavBar></NavBar>;
+  <Header></Header>;
   return (
     <div>
       <h1>Welcome to our shopping website!</h1>
@@ -59,6 +65,7 @@ function Home() {
       </form>
     </div>
   );
+  <Footer></Footer>;
 }
 
 export default Home;
