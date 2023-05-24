@@ -27,7 +27,7 @@ function Home() {
     setShowStore4(true);
   }
 
-  if (Store1) {
+  if (showStore1) {
     return <Store1></Store1>;
   }
 
