@@ -9,11 +9,9 @@ import './components/Global.css';
 function App() {
   <BrowserRouter>
   <div>
-    <Layout>
     <Routes>
       <Route exact path="/" component={<Home/>} />
     </Routes>
-    </Layout >
   </div>
 </BrowserRouter>
 }
