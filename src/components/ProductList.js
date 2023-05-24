@@ -1,4 +1,5 @@
 import React from 'react';
+import './Global.css';
 import S1Product1 from './Store1/S1Product1';
 import S1Product2 from './Store1/S1Product2';
 import S1Product3 from './Store1/S1Product3';
