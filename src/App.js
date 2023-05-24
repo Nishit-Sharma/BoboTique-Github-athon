@@ -7,14 +7,13 @@ import './components/Global.css';
 
 
 function App() {
-  <BrowserRouter>
-    <div>
+  return (
+    <BrowserRouter>
       <Routes>
-        <Route exact path="/" component={<Home />} />
+        <Route index element={<Home />} />
       </Routes>
-    </div>
   </BrowserRouter>
-  return <Home />
+  );
 }
 
 export default App;
