@@ -10,7 +10,7 @@ function Header() {
     }
 
     if (showHome) {
-      return <Home />;
+      return <Home></Home>;
     }
 
     return (
