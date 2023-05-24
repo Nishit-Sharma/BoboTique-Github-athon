@@ -48,7 +48,18 @@ function Home() {
 
   return (
     <div>
-      <head></head>
+      <header>
+        <div className="logo">
+          <img src="logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Malls</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+        </nav>
+      </header>
       <h1>Welcome to our shopping website!</h1>
       <p>Choose from our four malls to start shopping:</p>
       <ul>
