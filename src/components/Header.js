@@ -9,7 +9,7 @@ function Header() {
     setShowHome(true);
   }
 
-  if (showStore1) {
+  if (showHome) {
     return <Home></Home>;
   }
 
