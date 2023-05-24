@@ -3,14 +3,14 @@ import './Global.css';
 import Header from './Header.js'
 import Footer from './Footer.js'
 
-function Layout() {
-  return (
-    <div>
+const Layout = ({ children }) => {
+    return (
+      <div>
         <Header />
-        <Footer />
-    </div>
-
-  );
-}
-
-export default Layout;
+        {children}
+        <Navbar />
+      </div>
+    );
+  };
+  
+  export default Layout
