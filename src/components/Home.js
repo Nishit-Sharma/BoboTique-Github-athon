@@ -28,19 +28,19 @@ function Home() {
   }
 
   if (Store1) {
-    return <Store1 />;
+    return <Store1></Store1>;
   }
 
   if (showStore2) {
-    return <Store2 />;
+    return <Store2></Store2>;
   }
 
   if (showStore3) {
-    return <Store3 />;
+    return <Store3></Store3>;
   }
 
   if (showStore4) {
-    return <Store4 />;
+    return <Store4></Store4>;
   }
 
   return (
