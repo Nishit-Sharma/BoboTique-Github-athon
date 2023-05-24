@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Global.css';
 import Home from './Home.js'
-import Cart from '.Cart.js'
+import Cart from './Cart.js'
 
 function Header() {
   const [showHome, setShowHome] = useState(false);
