@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Global.css';
 import Store1 from './Store1/Store.js'
 import Store2 from './Store2/Store2.js'
@@ -6,15 +6,52 @@ import Store3 from './Store3/Store3.js'
 import Store4 from './Store4/Store4.js'
 
 function Home() {
+  const [showStore1, setShowStore1] =(false);
+  const [showStore2, setShowStore2] = useState(false);
+  const [showStore3, setShowStore3] = useState(false);
+  const [showStore4, setShowStore4] = useState(false);
+
+  const handleStore1Click = () => {
+    setShowStore1(true);
+  }
+
+  const handleStore2Click = () => {
+    setShowStore2(true);
+  }
+
+  const handleStore3Click = () => {
+    setShowStore3(true);
+  }
+
+  const handleStore4Click = () => {
+    setShowStore4(true);
+  }
+
+  if (Store1) {
+    return <Store1 />;
+  }
+
+  if (showStore2) {
+    return <Store2 />;
+  }
+
+  if (showStore3) {
+    return <Store3 />;
+  }
+
+  if (showStore4) {
+    return <Store4 />;
+  }
+
   return (
     <div>
       <h1>Welcome to our shopping website!</h1>
       <p>Choose from our four malls to start shopping:</p>
       <ul>
-        <li><a href="Store1/Store.js">Mall 1</a></li>
-        <li><a href="#">Mall 2</a></li>
-        <li><a href="#">Mall 3</a></li>
-        <li><a href="#">Mall 4</a></li>
+        <li><a href="#" onClick={handleStore1Click}>Mall 1</a></li>
+        <li><a href="#" onClick={handleStore2Click}>Mall 2</a></li>
+        <li><a href="#" onClick={handleStore3Click}>Mall 3</a></li>
+        <li><a href="#" onClick={handleStore4Click}>Mall 4</a></li>
       </ul>
       <form>
         <input type="text" placeholder="Search for products" />
