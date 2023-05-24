@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Layout from '../Layout.js'; 
 
-const Store1 = () => {
+const Store = () => {
 
   useEffect(() => {
     setShowStore1(true);
