@@ -48,6 +48,7 @@ function Home() {
 
   return (
     <div>
+      <Header />
       <h1>Welcome to our shopping website!</h1>
       <p>Choose from our four malls to start shopping:</p>
       <ul>
@@ -60,6 +61,7 @@ function Home() {
         <input type="text" placeholder="Search for products" />
         <button type="submit">Search</button>
       </form>
+      <Footer />
     </div>
   );
 
