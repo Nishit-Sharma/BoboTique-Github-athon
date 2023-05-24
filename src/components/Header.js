@@ -20,7 +20,7 @@ function Header() {
         </div>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#" onClick={handleHomeClick}>Home</a></li>
             <li><a href="#">Cart</a></li>
           </ul>
         </nav>
