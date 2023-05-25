@@ -2,9 +2,9 @@
 import Home from "./components/Home.js";
 import Cart from "./components/Cart.js";
 import Store1 from "./components/Store1/Store.js";
-import Store2 from "./components/Store1/Store2.js";
-import Store3 from "./components/Store1/Store3.js";
-import Store4 from "./components/Store1/Store4.js";
+import Store2 from "./components/Store2/Store2.js";
+import Store3 from "./components/Store3/Store3.js";
+import Store4 from "./components/Store4/Store4.js";
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 import './components/Global.css';
