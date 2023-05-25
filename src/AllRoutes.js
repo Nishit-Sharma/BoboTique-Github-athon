@@ -7,7 +7,7 @@ import Store3 from "./components/Store3/Store3.js";
 import Store4 from "./components/Store4/Store4.js";
 import { Route, Routes, useLocation} from 'react-router-dom';
 
-function Routes() {
+function AllRoutes() {
     const location = useLocation();
     return (
         <Routes location={location} key={location.pathname}>
@@ -21,4 +21,4 @@ function Routes() {
     );
 }
 
-export default Routes;
+export default AllRoutes;
