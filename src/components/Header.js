@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Global.css';
+import './i cooked.png'
 
 function Header() {
     return (
