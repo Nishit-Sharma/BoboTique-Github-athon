@@ -1,7 +1,6 @@
 import React from 'react';
 import './Global.css';
 import Layout from './Layout.js';
-import { motion } from 'framer-motion';
 import {useSpring, animated} from 'react-spring'
 
 function Cart() {
