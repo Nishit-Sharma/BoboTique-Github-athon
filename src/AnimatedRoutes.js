@@ -6,12 +6,10 @@ import Store2 from "./components/Store2/Store2.js";
 import Store3 from "./components/Store3/Store3.js";
 import Store4 from "./components/Store4/Store4.js";
 import { Route, Routes, useLocation} from 'react-router-dom';
-import {AnimatePresence} from 'framer-motion';
 
-function AnimatedRoutes() {
+function Routes() {
     const location = useLocation();
     return (
-    <AnimatePresence>
         <Routes location={location} key={location.pathname}>
             <Route index element={<Home />} />
             <Route path="cart" element={<Cart />} />
@@ -20,8 +18,7 @@ function AnimatedRoutes() {
             <Route path="mall3" element={<Store3 />} />
             <Route path="mall4" element={<Store4 />} />
         </Routes>
-    </AnimatePresence>
     );
 }
 
-export default AnimatedRoutes;
+export default Routes;
