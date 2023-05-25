@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import './Global.css';
 import Layout from './Layout.js';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function Home() {
   return (
-    <div>
+    <motion.div
+      initial={{opacity: 0}}
+      animate = {{opacity: 1}}
+      exit = {{opacity: 0}}
+    >
       <Layout>
       <h1>Welcome to our shopping website!</h1>
       <p>Choose from our four malls to start shopping:</p>
@@ -20,7 +25,7 @@ function Home() {
         <button type="submit">Search</button>
       </form>
       </Layout>
-    </div>
+    </motion.div>
   );
 
 }
