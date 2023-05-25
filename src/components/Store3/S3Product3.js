@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Global.css';
 
 function S3Product3() {
   return (

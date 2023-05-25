@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Global.css';
 
 function S4Product1() {
   return (

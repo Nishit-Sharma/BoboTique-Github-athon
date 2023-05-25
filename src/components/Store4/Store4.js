@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../Layout.js'; 
 import {useSpring, animated} from 'react-spring'
+import '../Global.css';
 
 function Store4() {
   const props = useSpring({

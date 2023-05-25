@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../Layout.js'; 
+import '../Global.css';
 import {useSpring, animated} from 'react-spring'
 
 function Store2() {
