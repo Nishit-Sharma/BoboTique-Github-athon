@@ -10,8 +10,8 @@ function Store2() {
   });
 
   return (
-    <Layout>
     <animated.div style={props}>
+    <Layout>
       <h2>Store Name</h2>
       <ul>
         <li>
@@ -35,8 +35,8 @@ function Store2() {
           <p>$40.00</p>
         </li>
       </ul>
-    </animated.div>
     </Layout>
+    </animated.div>
   );
 }
 
