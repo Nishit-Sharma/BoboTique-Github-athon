@@ -3,14 +3,17 @@ import './Global.css';
 import Layout from './Layout.js';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import {useSpring, animated} from 'react-spring'
 
 function Home() {
+  const props = useSpring({
+    to: { opacity: 1},
+    from: { opacity: 0},
+    reverse: flip,
+    delay: 200,
+  });
   return (
-    <motion.div
-      initial={{opacity: 0}}
-      animate = {{opacity: 1}}
-      exit = {{opacity: 0}}
-    >
+    <animated.div style={props}>
       <Layout>
       <h1>Welcome to our shopping website!</h1>
       <p>Choose from our four malls to start shopping:</p>
@@ -25,7 +28,7 @@ function Home() {
         <button type="submit">Search</button>
       </form>
       </Layout>
-    </motion.div>
+    </animated.div>
   );
 
 }
