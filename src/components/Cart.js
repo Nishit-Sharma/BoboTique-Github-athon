@@ -2,15 +2,18 @@ import React from 'react';
 import './Global.css';
 import Layout from './Layout.js';
 import { motion } from 'framer-motion';
+import {useSpring, animated} from 'react-spring'
 
 function Cart() {
+  const props = useSpring({
+    to: { opacity: 1},
+    from: { opacity: 0},
+    delay: 300,
+  });
+
   return (
     <Layout>
-    <motion.div
-      initial={{opacity: 0}}
-      animate = {{opacity: 1}}
-      exit = {{opacity: 0}}
-    >
+    <animated.div style={props}>
       <h2>Shopping Cart</h2>
       <ul>
         <li>
@@ -34,7 +37,7 @@ function Cart() {
       </ul>
       <p>Total: $60.00</p>
       <button>Checkout</button>
-    </motion.div>
+    </animated.div>
     </Layout>
   );
 }
