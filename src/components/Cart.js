@@ -1,11 +1,16 @@
 import React from 'react';
 import './Global.css';
 import Layout from './Layout.js';
+import { motion } from 'framer-motion';
 
 function Cart() {
   return (
     <Layout>
-    <div>
+    <motion.div
+      initial={{opacity: 0}}
+      animate = {{opacity: 1}}
+      exit = {{opacity: 0}}
+    >
       <h2>Shopping Cart</h2>
       <ul>
         <li>
@@ -29,7 +34,7 @@ function Cart() {
       </ul>
       <p>Total: $60.00</p>
       <button>Checkout</button>
-    </div>
+    </motion.div>
     </Layout>
   );
 }
