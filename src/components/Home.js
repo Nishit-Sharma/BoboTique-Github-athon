@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Global.css';
 import Layout from './Layout.js';
 import { Link } from 'react-router-dom';
