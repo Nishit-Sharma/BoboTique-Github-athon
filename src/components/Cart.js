@@ -11,8 +11,8 @@ function Cart() {
   });
 
   return (
-    <Layout>
     <animated.div style={props}>
+    <Layout>
       <h2>Shopping Cart</h2>
       <ul>
         <li>
@@ -36,8 +36,8 @@ function Cart() {
       </ul>
       <p>Total: $60.00</p>
       <button>Checkout</button>
-    </animated.div>
     </Layout>
+    </animated.div>
   );
 }
 
