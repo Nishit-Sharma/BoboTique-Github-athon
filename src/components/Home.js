@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Global.css';
 import Layout from './Layout.js';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
