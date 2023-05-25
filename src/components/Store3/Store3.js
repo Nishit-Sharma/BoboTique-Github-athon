@@ -1,10 +1,17 @@
 import React from 'react';
 import Layout from '../Layout.js'; 
+import {useSpring, animated} from 'react-spring'
 
 function Store3() {
+  const props = useSpring({
+    to: { opacity: 1},
+    from: { opacity: 0},
+    delay: 300,
+  });
+
   return (
     <Layout>
-    <div>
+    <animated.div style={props}>
       <h2>Store Name</h2>
       <ul>
         <li>
@@ -28,7 +35,7 @@ function Store3() {
           <p>$40.00</p>
         </li>
       </ul>
-    </div>
+    </animated.div>
     </Layout>
   );
 }

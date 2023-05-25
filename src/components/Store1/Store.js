@@ -1,9 +1,16 @@
 import React from 'react';
 import Layout from '../Layout.js'; 
+import {useSpring, animated} from 'react-spring'
 
 function Store() {
+  const props = useSpring({
+    to: { opacity: 1},
+    from: { opacity: 0},
+    delay: 300,
+  });
+
   return (
-    <div>
+    <animated.div style={props}>
       <Layout>
       <h2>Store Name</h2>
       <ul>
@@ -29,7 +36,7 @@ function Store() {
         </li>
       </ul>
       </Layout>
-    </div>
+    </animated.div>
   );
 }
 
