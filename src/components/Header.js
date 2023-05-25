@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Global.css';
-import './i cooked.png'
+import './i cooked.png';
 
 function Header() {
     return (
       <header>
         <div className="logo">
           <Link to ="/"></Link>
-          <img src="i cooked.png" alt="BoboTique" />
+          <img href="#" src="icooked.png" alt="BoboTique" />
         </div>
         <nav>
           <ul>
