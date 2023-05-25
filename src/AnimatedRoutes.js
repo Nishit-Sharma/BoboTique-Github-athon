@@ -24,4 +24,4 @@ function AnimatedRoutes() {
     );
 }
 
-export default AnimatedRoutes
+export default AnimatedRoutes;
