@@ -1,7 +1,9 @@
 import React from 'react';
+import Layout from '../Layout.js'; 
 
 function Store4() {
   return (
+    <Layout>
     <div>
       <h2>Store Name</h2>
       <ul>
@@ -27,6 +29,7 @@ function Store4() {
         </li>
       </ul>
     </div>
+    </Layout>
   );
 }
 
