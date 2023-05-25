@@ -2,6 +2,7 @@ import React from 'react';
 import './Global.css';
 import Layout from './Layout.js';
 import {useSpring, animated} from 'react-spring'
+import TransitionFile from './TransitionFile';
 
 function Cart() {
   const props = useSpring({
@@ -12,7 +13,7 @@ function Cart() {
 
   return (
     <Layout>
-    <animated.div style={props}>
+    <animated.div style={<TransitionFile />}>
       <h2>Shopping Cart</h2>
       <ul>
         <li>
