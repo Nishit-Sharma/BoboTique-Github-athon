@@ -20,8 +20,8 @@ function Home() {
       <Layout>
         
         <div className="Home">
-        <h1>Welcome to our shopping website!</h1>
-        <p>Choose from our four malls to start shopping:</p>
+          <h1>Welcome to our shopping website!</h1>
+          <p>Choose from our four malls to start shopping:</p>
           <ul>
             <li>
               <Link to="/mall1">
@@ -44,11 +44,11 @@ function Home() {
               </Link>
             </li>
           </ul>
+          <form>
+            <input type="text" placeholder="Search for products" />
+            <button type="submit">Search</button>
+          </form>
         </div>
-        <form>
-          <input type="text" placeholder="Search for products" />
-          <button type="submit">Search</button>
-        </form>
       </Layout>
     </animated.div>
   );
