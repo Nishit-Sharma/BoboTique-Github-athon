@@ -23,7 +23,6 @@ function Cart() {
     });
     const newCartItems = cartItems.filter(cartItem => cartItem !== item);
     setCartItems(newCartItems);
-    const total = newCartItems.reduce((acc, curr) => acc + curr.getPrice(), 0);
   }
 
   const findStore = (item) => {
