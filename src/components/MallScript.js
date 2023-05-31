@@ -71,7 +71,7 @@ class Store {
 
 const store = new Store("My Store");
 
-const Mall1 = new Mall("Mall1");
+const Mall1 = new Mall("Mall 1");
 const Mall2 = new Mall("Mall 2");
 const Mall3 = new Mall("Mall 3");
 const Mall4 = new Mall("Mall 4");

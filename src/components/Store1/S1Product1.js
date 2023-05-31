@@ -2,7 +2,7 @@ import React from 'react';
 import '../Global.css';
 import {useSpring, animated} from 'react-spring'
 import Layout from '../Layout.js'; 
-import { Mall, Item } from '../MallScript';
+import { Mall1, Item } from '../MallScript';
 
 function S1Product1() {
   const props = useSpring({
