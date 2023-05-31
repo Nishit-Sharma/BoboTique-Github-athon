@@ -21,6 +21,7 @@ function Cart() {
     const newCartItems = [...cartItems];
     newCartItems.splice(index, 1);
     setCartItems(newCartItems);
+    console.log("Item removed from cart!");
   }
 
   const displayItems = () => {
