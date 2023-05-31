@@ -4,8 +4,6 @@ import Layout from './Layout.js';
 import {useSpring, animated} from 'react-spring'
 import { Mall1, Mall2, Mall3, Mall4 } from './MallScript.js';
 
-let total = 0;
-
 function Cart() {
   const props = useSpring({
     to: { opacity: 1},
@@ -38,10 +36,6 @@ function Cart() {
     }
   }
 
-  const addTotal = (item) => {
-    total += item.getPrice();
-  }
-
   const displayItems = () => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
     const items = malls.flatMap(mall => mall.itemList);
@@ -52,7 +46,6 @@ function Cart() {
         <p>${item.getPrice().toFixed(2)}</p>
         <p>Mall: {findStore(item)}</p>
         <button onClick={() => removeItem(item)}>Remove Item</button>
-        {addTotal(item)}
       </li>
     ));
   }

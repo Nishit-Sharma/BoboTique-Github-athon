@@ -2,7 +2,7 @@ import React from 'react';
 import '../Global.css';
 import {useSpring, animated} from 'react-spring'
 import Layout from '../Layout.js'; 
-import { Mall1, Item } from '../MallScript';
+import { Mall1, Item, total } from '../MallScript';
 
 function S1Product1() {
   const props = useSpring({
@@ -14,6 +14,7 @@ function S1Product1() {
   const handleAddToCart = () => {
     const product = new Item("Product 1", 10.00); 
     Mall1.addItem(product);
+    total += 10;
     console.log("Item added to cart!");
   }
 
