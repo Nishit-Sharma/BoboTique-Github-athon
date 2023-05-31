@@ -3,7 +3,7 @@ import Layout from '../Layout.js';
 import '../Global.css';
 import { Link } from 'react-router-dom';
 import {useSpring, animated} from 'react-spring'
-import { Mall1 } from '../MallScript.js';
+import { Mall, Item , Mall1} from '../MallScript.js';
 
 function Store() {
   const props = useSpring({
@@ -12,13 +12,19 @@ function Store() {
     delay: 300,
   });
 
+  const myMall = new Mall("My Mall");
+  myMall.addItem(new Item("Product 1", 10));
+  myMall.addItem(new Item("Product 2", 20));
+  myMall.addItem(new Item("Product 3", 30));
+  myMall.addItem(new Item("Product 4", 40));
+
   return (
     <animated.div style={props}>
       <Layout>
         <div className="storeBox">
-          <h2>{Mall1.getMallName()}</h2>
+          <h2>{myMall.getMallName()}</h2>
           <ul>
-            {Mall1.itemList.map((item, index) => (
+            {myMall.itemList.map((item, index) => (
               <li key={index}>
                 <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
                 <h3><Link to={`/mall1/product${index + 1}`}>{item.getName()}</Link></h3>
