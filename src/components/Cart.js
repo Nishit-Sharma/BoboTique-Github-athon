@@ -27,12 +27,13 @@ function Cart() {
 
   const findStore = (item) => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
-    malls.forEach(mall => {
-      const index = mall.itemList.indexOf(item);
+    for (let i = 0; i < malls.length; i++) {
+      const index = malls[i].itemList.indexOf(item);
       if (index !== -1) {
-        mall.getMallName();
+        return malls[i].getMallName();
       }
-    });
+    }
+    return null; 
   }
 
   const displayItems = () => {
