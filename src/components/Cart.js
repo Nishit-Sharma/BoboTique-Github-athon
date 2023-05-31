@@ -4,17 +4,12 @@ import Layout from './Layout.js';
 import {useSpring, animated} from 'react-spring'
 import { Mall, Item } from './MallScript.js';
 
-function Cart() {
+function Cart({ malls }) {
   const props = useSpring({
     to: { opacity: 1},
     from: { opacity: 0},
     delay: 300,
   });
-
-  const myMall = new Mall("My Mall");
-  myMall.addItem(new Item("Product 1", 10));
-  myMall.addItem(new Item("Product 2", 20));
-  myMall.addItem(new Item("Product 3", 30));
 
   const [cartItems, setCartItems] = useState([]);
 
@@ -39,9 +34,20 @@ function Cart() {
                 <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
                 <h3>{item.getName()}</h3>
                 <p>${item.getPrice().toFixed(2)}</p>
-                <p>Mall: {myMall.getMallName()}</p>
+                <p>Mall: {item.mallName}</p>
                 <button onClick={() => handleRemoveFromCart(index)}>Remove</button>
               </li>
+            ))}
+            {malls.map((mall) => (
+              mall.itemList.map((item, index) => (
+                <li key={index}>
+                  <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
+                  <h3>{item.getName()}</h3>
+                  <p>${item.getPrice().toFixed(2)}</p>
+                  <p>Mall: {mall.getMallName()}</p>
+                  <button onClick={() => handleAddToCart(item)}>Add to Cart</button>
+                </li>
+              ))
             ))}
           </ul>
           <p>Total: ${cartItems.reduce((total, item) => total + item.getPrice(), 0).toFixed(2)}</p>
