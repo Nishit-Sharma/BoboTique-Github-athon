@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Global.css';
 import Layout from './Layout.js';
 import {useSpring, animated} from 'react-spring'
-import { Mall1, Mall2, Mall3, Mall4 } from './MallScript.js';
+import { Mall1, Mall2, Mall3, Mall4, total } from './MallScript.js';
 
 function Cart() {
   const props = useSpring({
