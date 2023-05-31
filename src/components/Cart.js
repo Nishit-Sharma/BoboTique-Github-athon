@@ -35,7 +35,7 @@ function Cart() {
         <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
         <h3>{item.getName()}</h3>
         <p>${item.getPrice().toFixed(2)}</p>
-        <p>Mall: {mall.getMallName()}</p>
+        <p>Mall: {item.mall.getMallName()}</p>
         <button onClick={() => removeItem(item)}>Remove Item</button>
         total += {item.getPrice()};
       </li>
