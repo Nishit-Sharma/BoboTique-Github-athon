@@ -42,13 +42,13 @@ function Cart() {
     return (
       <animated.ul style={props}>
         {items.map((item, index) => (
-          <li key={index}>
+          <animated.li style={props} key={index}>
             <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
             <h3>{item.getName()}</h3>
             <p>${item.getPrice().toFixed(2)}</p>
             <p>Mall: {findStore(item)}</p>
             <button onClick={() => removeItem(item)}>Remove Item</button>
-          </li>
+          </animated.li>
         ))}
       </animated.ul>
     );
