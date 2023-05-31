@@ -3,7 +3,7 @@ import Layout from '../Layout.js';
 import '../Global.css';
 import { Link } from 'react-router-dom';
 import {useSpring, animated} from 'react-spring'
-import { Mall, Item } from '../MallScript';
+import { Mall, Item } from '../MallScript.js';
 
 function Store() {
   const props = useSpring({
