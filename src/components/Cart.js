@@ -23,6 +23,7 @@ function Cart() {
     });
     const newCartItems = cartItems.filter(cartItem => cartItem !== item);
     setCartItems(newCartItems);
+    const total = newCartItems.reduce((acc, curr) => acc + curr.getPrice(), 0);
   }
 
   const findStore = (item) => {
@@ -33,7 +34,6 @@ function Cart() {
         return malls[i].getMallName();
       }
     }
-    return null; 
   }
 
   const displayItems = () => {
@@ -50,6 +50,8 @@ function Cart() {
     ));
   }
 
+  const total = cartItems.reduce((acc, curr) => acc + curr.getPrice(), 0);
+
   return (
     <animated.div style={props}>
       <Layout>
@@ -58,7 +60,7 @@ function Cart() {
           <ul>
             {displayItems()}
           </ul>
-          {/* <p>Total: $ + total.toFixed(2)</p> */}
+          <p>Total: ${total.toFixed(2)}</p>
           <button>Checkout</button>
         </div>
       </Layout>
