@@ -32,7 +32,7 @@ function Cart() {
     malls.forEach(mall => {
       const index = mall.itemList.indexOf(item);
       if (index !== -1) {
-        return mall.getMallName;
+        return mall.getMallName();
       }
     });
   }
