@@ -32,7 +32,7 @@ function Cart() {
         <h3>{item.getName()}</h3>
         <p>${item.getPrice().toFixed(2)}</p>
         <p>Mall: {item.mallName}</p>
-        <button onClick={() => handleAddToCart(item)}>Add to Cart</button>
+        <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
       </li>
     ));
   }
