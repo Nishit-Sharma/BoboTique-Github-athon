@@ -24,7 +24,7 @@ function Cart() {
   }
 
   const displayItems = () => {
-    const malls = [M1, Mall2, Mall3, Mall4];
+    const malls = [Mall1, Mall2, Mall3, Mall4];
     const items = malls.flatMap(mall => mall.itemList);
     return items.map((item, index) => (
       <li key={index}>
@@ -32,7 +32,7 @@ function Cart() {
         <h3>{item.getName()}</h3>
         <p>${item.getPrice().toFixed(2)}</p>
    <p>Mall: {item.mallName}</p>
-        <button onClick={() => removeItem(item)}>Remove Item</button>
+        <button onClick={() => handleRemoveFromCart(item)}>Remove Item</button>
       </li>
     ));
   }
