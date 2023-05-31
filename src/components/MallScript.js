@@ -57,3 +57,8 @@ class Mall {
         this.itemList[index] = new Item(name, price);
     }
 }
+
+export {
+    Item,
+    Mall
+}
