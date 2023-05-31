@@ -11,8 +11,6 @@ function Cart() {
     delay: 300,
   });
 
-  let total = 0;
-
   const [cartItems, setCartItems] = useState([]);
 
   const removeItem = (item) => {
@@ -32,7 +30,7 @@ function Cart() {
     malls.forEach(mall => {
       const index = mall.itemList.indexOf(item);
       if (index !== -1) {
-        return mall.getMallName();
+        mall.getMallName();
       }
     });
   }
@@ -47,7 +45,6 @@ function Cart() {
         <p>${item.getPrice().toFixed(2)}</p>
         <p>Mall: {findStore(item)}</p>
         <button onClick={() => removeItem(item)}>Remove Item</button>
-        total += {item.getPrice()};
       </li>
     ));
   }
