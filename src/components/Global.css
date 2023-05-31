@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #d4ecfb; /* Updated background color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   a {
@@ -22,12 +25,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: #200c4c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
   
   .logo img {
-    height: 50px;
+    height: 100px; /* Updated size of the logo */
+    width: 113px
   }
   
   nav ul {
@@ -47,43 +55,52 @@ body {
   header .cart a {
     color: #c8ff2c;
   }
+
+  .Layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
   
   /* Home */
   .Home {
-    text-align: center;
-    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
   }
-  
+
   .Home h1 {
     font-size: 36px;
     margin-bottom: 20px;
   }
-  
+
   .Home p {
-   font-size: 18px;
+    font-size: 18px;
     margin-bottom: 20px;
   }
-  
+
   .Home ul {
     display: flex;
     justify-content: center;
   }
-  
+
   .Home li {
     margin-right: 20px;
   }
-  
+
   .Home form {
     margin-top: 50px;
   }
-  
+
   .Home input[type="text"] {
     padding: 10px;
     border: none;
     border-radius: 5px;
     margin-right: 10px;
   }
-  
+
   .Home button[type="submit"] {
     padding: 10px 20px;
     background-color: #333;
@@ -224,11 +241,15 @@ body {
   }
   
   /* Footer */
-  Footer {
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     padding: 20px;
     background-color: #200c4c;
-    color: #c8ff2c/* Updated background color */
+    color: #c8ff2c;
   }
 
   .fade-enter {
