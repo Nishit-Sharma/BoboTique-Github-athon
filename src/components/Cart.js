@@ -35,6 +35,7 @@ function Cart() {
         return mall.getMallName;
       }
     });
+  }
 
   const displayItems = () => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
