@@ -15,7 +15,7 @@ function Cart() {
 
   const removeItem = (item) => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
-    malls.forEach(m => {
+    malls.forEach(mall => {
       const index = mall.itemList.indexOf(item);
       if (index !== -1) {
         mall.removeItem(index);
@@ -33,15 +33,10 @@ function Cart() {
         <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
         <h3>{item.getName()}</h3>
         <p>${item.getPrice().toFixed(2)}</p>
-        <p>Mall: {item.getMallName()}</p>
-        <button onClick={() => addItem(item)}>Add to Cart</button>
+        <p>Mall: {item.mallName}</p>
+        <button onClick={() => removeItem(item)}>Remove Item</button>
       </li>
     ));
-  }  
-
-  const calculateTotal = () => {
-    const total = cartItems.reduce((accumulator, item) => accumulator + item.getPrice(), 0);
-    return total.toFixed(2);
   }
 
   return (
@@ -50,18 +45,9 @@ function Cart() {
         <div className="storeBox">
           <h2>Shopping Cart</h2>
           <ul>
-            {cartItems.map((item, index) => (
-              <li key={index}>
-                <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
-                <h3>{item.getName()}</h3>
-                <p>${item.getPrice().toFixed(2)}</p>
-                <p>Mall: {item.getMallName()}</p>
-                <button onClick={() => removeItem(item)}>Remove Item</button>
-              </li>
-            ))}
             {displayItems()}
           </ul>
-          <p>Total: ${calculateTotal()}</p>
+          <p>Total: ${cartItems.reduce((total, item) => total + item.getPrice(), 0).toFixed(2)}</p>
           <button>Checkout</button>
         </div>
       </Layout>
