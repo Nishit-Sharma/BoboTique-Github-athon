@@ -21,6 +21,7 @@ function Cart() {
     const newCartItems = [...cartItems];
     newCartItems.splice(index, 1);
     setCartItems(newCartItems);
+    displayItems();
   }
 
   const displayItems = () => {
