@@ -58,7 +58,64 @@ class Mall {
     }
 }
 
-export {
-    Item,
-    Mall
+class Store {
+    constructor(name) {
+        this.name = name;
+        this.malls = [];
+    }
+
+    addMall(mall) {
+        this.malls.push(mall);
+    }
 }
+
+const store = new Store("My Store");
+
+const mall1 = new Mall("Mall1");
+const mall2 = new Mall("Mall 2");
+const mall3 = new Mall("Mall 3");
+const mall4 = new Mall("Mall 4");
+
+store.addMall(mall1);
+store.addMall(mall2);
+store.addMall(mall3);
+store.addMall(mall4);
+
+const product1 = new Item("Product 1", 10.00);
+const product2 = new Item("Product 2", 20.00);
+const product3 = new Item("Product 3", 30.00);
+const product4 = new Item("Product 4", 40.00);
+const product5 = new Item("Product 5", 50.00);
+const product6 = new Item("Product 6", 60.00);
+const product7 = new Item("Product 7", 70.00);
+const product8 = new Item("Product 8", 80.00);
+const product9 = new Item("Product 9", 90.00);
+const product10 = new Item("Product 10", 100.00);
+const product11 = new Item("Product 11", 110.00);
+const product12 = new Item("Product 12", 120.00);
+const product13 = new Item("Product 13", 130.00);
+const product14 = new Item("Product 14", 140.00);
+const product15 = new Item("Product 15", 150.00);
+const product16 = new Item("Product 16", 160.00);
+
+mall1.addItem(product1);
+mall1.addItem(product2);
+mall1.addItem(product3);
+mall1.addItem(product4);
+
+mall2.addItem(product5);
+mall2.addItem(product6);
+mall2.addItem(product7);
+mall2.addItem(product8);
+
+mall3.addItem(product9);
+mall3.addItem(product10);
+mall3.addItem(product11);
+mall3.addItem(product12);
+
+mall4.addItem(product13);
+mall4.addItem(product14);
+mall4.addItem(product15);
+mall4.addItem(product16);
+
+export { Store, Mall, Item, store, mall1, mall2, mall3, mall4 };
