@@ -71,15 +71,15 @@ class Store {
 
 const store = new Store("My Store");
 
-const mall1 = new Mall("Mall1");
-const mall2 = new Mall("Mall 2");
-const mall3 = new Mall("Mall 3");
-const mall4 = new Mall("Mall 4");
+const Mall1 = new Mall("Mall1");
+const Mall2 = new Mall("Mall 2");
+const Mall3 = new Mall("Mall 3");
+const Mall4 = new Mall("Mall 4");
 
-store.addMall(mall1);
-store.addMall(mall2);
-store.addMall(mall3);
-store.addMall(mall4);
+store.addMall(Mall1);
+store.addMall(Mall2);
+store.addMall(Mall3);
+store.addMall(Mall4);
 
 const product1 = new Item("Product 1", 10.00);
 const product2 = new Item("Product 2", 20.00);
@@ -98,24 +98,24 @@ const product14 = new Item("Product 14", 140.00);
 const product15 = new Item("Product 15", 150.00);
 const product16 = new Item("Product 16", 160.00);
 
-mall1.addItem(product1);
-mall1.addItem(product2);
-mall1.addItem(product3);
-mall1.addItem(product4);
+Mall1.addItem(product1);
+Mall1.addItem(product2);
+Mall1.addItem(product3);
+Mall1.addItem(product4);
 
-mall2.addItem(product5);
-mall2.addItem(product6);
-mall2.addItem(product7);
-mall2.addItem(product8);
+Mall2.addItem(product5);
+Mall2.addItem(product6);
+Mall2.addItem(product7);
+Mall2.addItem(product8);
 
-mall3.addItem(product9);
-mall3.addItem(product10);
-mall3.addItem(product11);
-mall3.addItem(product12);
+Mall3.addItem(product9);
+Mall3.addItem(product10);
+Mall3.addItem(product11);
+Mall3.addItem(product12);
 
-mall4.addItem(product13);
-mall4.addItem(product14);
-mall4.addItem(product15);
-mall4.addItem(product16);
+Mall4.addItem(product13);
+Mall4.addItem(product14);
+Mall4.addItem(product15);
+Mall4.addItem(product16);
 
-export { Store, Mall, Item, store, mall1, mall2, mall3, mall4 };
+export { Store, Mall, Item, store, Mall1, Mall2, Mall3, Mall4 };
