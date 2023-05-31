@@ -13,7 +13,7 @@ function Store4() {
   return (
     <animated.div style={props}>
       <Layout>
-        <div className="Home">
+        <div className="storeBox">
           <h2>Store Name</h2>
           <ul>
             <li>

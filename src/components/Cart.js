@@ -13,7 +13,7 @@ function Cart() {
   return (
     <animated.div style={props}>
       <Layout>
-        <div className="Home">
+        <div className="storeBox">
           <h2>Shopping Cart</h2>
           <ul>
             <li>

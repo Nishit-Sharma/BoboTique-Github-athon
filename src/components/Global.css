@@ -129,6 +129,27 @@ nav ul li a {
   margin-bottom: 20px;
 }
 
+.storeBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  padding: 20px;
+  max-width: 800px; /* Optional: Limit the width of the store container */
+  margin: auto; /* Center horizontally and vertically */
+}
+
+.storeBox h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.storeBox p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
 .logo-size {
   width: 150px;
 }
@@ -146,22 +167,29 @@ nav ul li a {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .Store img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .Store h3 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #333;
 }
 
 .Store p {
   font-size: 18px;
   margin-bottom: 10px;
+  color: #777;
 }
 
 .Store button {
@@ -172,6 +200,31 @@ nav ul li a {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+}
+
+.Store button:hover {
+  background-color: #555;
+}
+
+.Store li {
+  list-style-type: none;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.Store li:hover {
+  transform: translateY(-5px);
+}
+
+.Store h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
 }
 
 /* Product */
