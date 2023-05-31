@@ -3,8 +3,8 @@ import './Global.css';
 
 function Footer() {
   return (
-    <footer>
-      <p>Nishit, Brayden, Afnan, Vansh, Chris, Reihan</p>
+    <footer className="footer">
+      <p className="footer-text">Nishit, Brayden, Afnan, Vansh, Chris, Reihan</p>
     </footer>
   );
 }

@@ -5,8 +5,8 @@ import image from './icooked.png';
 
 function Header() {
   return (
-    <header>
-      <div className="logo">
+    <header className="header">
+      <div className="logo header-logo header-logo-size">
         <Link to="/">
           <img src={image} alt="BoboTique" />
         </Link>
