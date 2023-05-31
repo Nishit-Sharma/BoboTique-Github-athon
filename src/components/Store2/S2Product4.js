@@ -1,16 +1,26 @@
 import React from 'react';
 import '../Global.css';
+import {useSpring, animated} from 'react-spring'
+import Layout from '../Layout.js'; 
 
-function S2Product1() {
+function S2Product4() {
+  const props = useSpring({
+    to: { opacity: 1},
+    from: { opacity: 0},
+    delay: 300,
+  });
+
   return (
-    <div>
-      <h2>Product Name</h2>
-      <img src="product.png" alt="Product" />
-      <p>Description of the product.</p>
-      <p>$10.00</p>
-      <button>Add to Cart</button>
-    </div>
+    <animated.div style = {props}>
+      <Layout>
+        <h2>Product Name</h2>
+        <img src="product.png" alt="Product" />
+        <p>Description of the product.</p>
+        <p>$10.00</p>
+        <button>Add to Cart</button>
+      </Layout>
+    </animated.div>
   );
 }
 
-export default S2Product1;
+export default S2Product4;
