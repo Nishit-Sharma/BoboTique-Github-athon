@@ -4,6 +4,8 @@ import Layout from './Layout.js';
 import {useSpring, animated} from 'react-spring'
 import { Mall1, Mall2, Mall3, Mall4 } from './MallScript.js';
 
+let total = 0;
+
 function Cart() {
   const props = useSpring({
     to: { opacity: 1},
@@ -12,6 +14,18 @@ function Cart() {
   });
 
   const [cartItems, setCartItems] = useState([]);
+
+  const addItem = (item) => {
+    const malls = [Mall1, Mall2, Mall3, Mall4];
+    malls.forEach(mall => {
+      const index = mall.itemList.indexOf(item);
+      if (index !== -1) {
+        mall.addItemToCart(index);
+      }
+    });
+    setCartItems([...cartItems, item]);
+    total += item.getPrice();
+  }
 
   const removeItem = (item) => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
@@ -23,6 +37,7 @@ function Cart() {
     });
     const newCartItems = cartItems.filter(cartItem => cartItem !== item);
     setCartItems(newCartItems);
+    total -= item.getPrice();
   }
 
   const findStore = (item) => {
@@ -48,8 +63,6 @@ function Cart() {
       </li>
     ));
   }
-
-  const total = cartItems.reduce((acc, curr) => acc + curr.getPrice(), 0);
 
   return (
     <animated.div style={props}>
