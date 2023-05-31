@@ -45,7 +45,7 @@ function Cart() {
         <div className="storeBox">
           <h2>Shopping Cart</h2>
           <ul>
-            {cartItems.map((item, index) => (
+            {/* {cartItems.map((item, index) => (
               <li key={index}>
                 <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
                 <h3>{item.getName()}</h3>
@@ -53,7 +53,7 @@ function Cart() {
                 <p>Mall: {item.mallName}</p>
                 <button onClick={() => removeItem(item)}>Remove Item</button>
               </li>
-            ))}
+            ))} */}
             {displayItems()}
           </ul>
           <p>Total: ${cartItems.reduce((total, item) => total + item.getPrice(), 0).toFixed(2)}</p>
