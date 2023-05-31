@@ -38,17 +38,6 @@ function Cart({ malls }) {
                 <button onClick={() => handleRemoveFromCart(index)}>Remove</button>
               </li>
             ))}
-            {malls.map((mall) => (
-              mall.itemList.map((item, index) => (
-                <li key={index}>
-                  <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
-                  <h3>{item.getName()}</h3>
-                  <p>${item.getPrice().toFixed(2)}</p>
-                  <p>Mall: {mall.getMallName()}</p>
-                  <button onClick={() => handleAddToCart(item)}>Add to Cart</button>
-                </li>
-              ))
-            ))}
           </ul>
           <p>Total: ${cartItems.reduce((total, item) => total + item.getPrice(), 0).toFixed(2)}</p>
           <button>Checkout</button>

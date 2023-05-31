@@ -15,6 +15,7 @@ function S1Product1() {
     const product = new Item("Product 1", 10.00); 
     Mall1.addItem(product);
     console.log("Item added to cart!");
+    console.log(Mall1);
   }
 
   return (
