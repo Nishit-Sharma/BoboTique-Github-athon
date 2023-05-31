@@ -15,18 +15,6 @@ function Cart() {
 
   const [cartItems, setCartItems] = useState([]);
 
-  const addItem = (item) => {
-    const malls = [Mall1, Mall2, Mall3, Mall4];
-    malls.forEach(mall => {
-      const index = mall.itemList.indexOf(item);
-      if (index !== -1) {
-        mall.addItemToCart(index);
-      }
-    });
-    setCartItems([...cartItems, item]);
-    total += item.getPrice();
-  }
-
   const removeItem = (item) => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
     malls.forEach(mall => {
@@ -50,6 +38,10 @@ function Cart() {
     }
   }
 
+  const addTotal = (item) => {
+    total += item.getPrice();
+  }
+
   const displayItems = () => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
     const items = malls.flatMap(mall => mall.itemList);
@@ -60,6 +52,7 @@ function Cart() {
         <p>${item.getPrice().toFixed(2)}</p>
         <p>Mall: {findStore(item)}</p>
         <button onClick={() => removeItem(item)}>Remove Item</button>
+        {addTotal(item)}
       </li>
     ));
   }
