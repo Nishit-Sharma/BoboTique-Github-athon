@@ -27,6 +27,15 @@ function Cart() {
     setCartItems(newCartItems);
   }
 
+  const findStore = (item) => {
+    const malls = [Mall1, Mall2, Mall3, Mall4];
+    malls.forEach(mall => {
+      const index = mall.itemList.indexOf(item);
+      if (index !== -1) {
+        return mall.getMallName;
+      }
+    });
+
   const displayItems = () => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
     const items = malls.flatMap(mall => mall.itemList);
@@ -35,7 +44,7 @@ function Cart() {
         <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
         <h3>{item.getName()}</h3>
         <p>${item.getPrice().toFixed(2)}</p>
-        <p>Mall: {item.getMallName()}</p>
+        <p>Mall: {findStore(item)}</p>
         <button onClick={() => removeItem(item)}>Remove Item</button>
         total += {item.getPrice()};
       </li>
