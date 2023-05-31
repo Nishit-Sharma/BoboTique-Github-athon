@@ -11,11 +11,10 @@ function S1Product1() {
     delay: 300,
   });
 
-  const myMall = new Mall("My Mall");
-
   const handleAddToCart = () => {
-    const newItem = new Item("Product Name", 10.00);
-    myMall.addItem(newItem);
+    const product = new Item("Product 1", 10.00); 
+    Mall1.addItem(product);
+    console.log("Item added to cart!");
   }
 
   return (
