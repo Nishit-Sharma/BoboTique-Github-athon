@@ -3,10 +3,10 @@ import './Global.css';
 import Layout from './Layout.js';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
-import gucciLogo from './gucci-logo.png'; // Import the Gucci logo image
-import lvLogo from './Louis-Vuitton-logo.png';
-import balenciagaLogo from './Balenciaga-logo-1917-removebg-preview.png';
-import rolexLogo from './Rolex-logo.png';
+import gucciLogo from './static/gucci-logo.png'; // Import the Gucci logo image
+import lvLogo from './static/Louis-Vuitton-logo.png';
+import balenciagaLogo from './static/Balenciaga-logo-1917-removebg-preview.png';
+import rolexLogo from './static/Rolex-logo.png';
 
 function Home() {
   const props = useSpring({
