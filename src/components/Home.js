@@ -21,7 +21,7 @@ function Home() {
         
         <div className="Home">
           <h1>Welcome to our shopping website!</h1>
-          <p>Choose from our four malls to start shopping:</p>
+          <p>Choose from our four stores and start shopping:</p>
           <ul>
             <li>
               <Link to="/mall1">
