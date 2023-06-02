@@ -1,31 +1,33 @@
 import React from 'react';
 import '../Global.css';
-import {useSpring, animated} from 'react-spring'
-import Layout from '../Layout.js'; 
+import { useSpring, animated } from 'react-spring';
+import Layout from '../Layout.js';
 import { Mall1, Item, total } from '../MallScript';
 
 function S1Product1() {
   const props = useSpring({
-    to: { opacity: 1},
-    from: { opacity: 0},
+    to: { opacity: 1 },
+    from: { opacity: 0 },
     delay: 300,
   });
 
   const handleAddToCart = () => {
-    const product = new Item("Product 1", 10.00); 
+    const product = new Item('Product 1', 10.0);
     Mall1.addItem(product);
     total += 10;
-    console.log("Item added to cart!");
-  }
+    console.log('Item added to cart!');
+  };
 
   return (
-    <animated.div style = {props}>
+    <animated.div style={props}>
       <Layout>
-        <h2>Product Name</h2>
-        <img src="product.png" alt="Product" />
-        <p>Description of the product.</p>
-        <p>$10.00</p>
-        <button onClick={handleAddToCart}>Add to Cart</button>
+        <div className="Product">
+          <h2>Product Name</h2>
+          <img src="product.png" alt="Product" />
+          <p>Description of the product.</p>
+          <p>$10.00</p>
+          <button onClick={handleAddToCart}>Add to Cart</button>
+        </div>
       </Layout>
     </animated.div>
   );
