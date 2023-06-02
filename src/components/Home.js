@@ -44,10 +44,6 @@ function Home() {
               </Link>
             </li>
           </ul>
-          <form>
-            <input type="text" placeholder="Search for products" />
-            <button type="submit">Search</button>
-          </form>
         </div>
       </Layout>
     </animated.div>
