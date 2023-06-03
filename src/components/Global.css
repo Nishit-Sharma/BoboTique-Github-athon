@@ -18,6 +18,7 @@ h1 {
   color: #333;
   margin-bottom: 20px;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 p {
@@ -75,6 +76,7 @@ button[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Header */
@@ -109,6 +111,7 @@ nav ul {
 nav ul li a {
   color: #c8ff2c;
   font-size: 18px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .Home {
@@ -116,20 +119,22 @@ nav ul li a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Set the height to 100% of the viewport height */
+  height: 100vh;
   padding: 20px;
-  max-width: 800px; /* Optional: Limit the width of the home container */
-  margin: auto; /* Center horizontally and vertically */
+  max-width: 800px;
+  margin: auto;
 }
 
 .Home h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .Home p {
   font-size: 18px;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .logo-size {
@@ -139,7 +144,7 @@ nav ul li a {
 /* Layout */
 .Layout {
   max-width: 1200px;
-  margin: 80px auto 0; /* Adjust the top margin to accommodate the header */
+  margin: 80px auto 0;
   padding: 20px;
 }
 
@@ -147,21 +152,21 @@ nav ul li a {
 .Store {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  justify-content: center; /* Horizontally center the products */
-  align-items: center; /* Vertically center the products */
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   padding: 50px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Center the container horizontally */
-  max-width: 800px; /* Set a maximum width for the container */
+  margin: 0 auto;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
+  align-items: center;
   justify-content: center;
-  margin-top: 120px; /* Add margin to the top to create space for the header */
-  margin-bottom: 80px; /* Add margin to the bottom to create space for the footer */
+  margin-top: 120px;
+  margin-bottom: 80px;
 }
 
 .Store img {
@@ -203,8 +208,8 @@ nav ul li a {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  justify-items: center; /* Horizontally center the products within the grid */
-  align-items: flex-start; /* Align products to the top of each grid cell */
+  justify-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -234,7 +239,7 @@ nav ul li a {
   margin-bottom: 20px;
   text-align: center;
   color: #333;
-  margin-top: 20px; /* Add margin to the top to separate from the header */
+  margin-top: 20px;
 }
 
 .product-image {
@@ -253,10 +258,10 @@ nav ul li a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 80px; /* Adjust the margin to provide space for the header */
-  min-height: calc(100vh - 80px); /* Subtract the header height from the viewport height */
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
   text-align: center;
-  margin-bottom: 80px; /* Add margin to the bottom to create space for the footer */
+  margin-bottom: 80px;
 }
 
 .Product img {
@@ -287,11 +292,16 @@ nav ul li a {
   font-size: 16px;
 }
 
-
 /* Cart */
 .Cart {
-  margin-top: 120px; /* Add margin to the top to prevent text overlap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+  margin-bottom: 80px;
   padding: 50px;
+  text-align: center;
 }
 
 .CartItem {
@@ -334,9 +344,91 @@ nav ul li a {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 999; /* Ensure the footer is above other elements */
+  z-index: 999;
 }
 
 .footer-text {
   color: #c8ff2c;
+}
+
+.cart-item-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-5px);
+}
+
+.cart-item-image {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.cart-item-price {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.cart-item-store {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.cart-item-remove {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cart-heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.cart-total {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cart-checkout-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-checkout-button:hover {
+  background-color: #555;
 }
