@@ -31,10 +31,10 @@ function Store3() {
           <ul>
             {myMall.itemList.map((item, index) => (
               <li key={index}>
-                {index === 0 && <img className="product-image" src={BalenciagaBagImage} alt={`Balenciaga Bag`} />}
-                {index === 1 && <img className="product-image" src={BalenciagaShirtImage} alt={`Balenciaga Shirt`} />}
-                {index === 2 && <img className="product-image" src={BalenciagaShoesImage} alt={`Balenciaga Shoes`} />}
-                {index === 3 && <img className="product-image" src={BalenciagaSunglassesImage} alt={`Balenciaga Sunglasses`} />}
+                {index === 0 && <Link to={`/mall3/product${index + 1}`}><img className="product-image" src={BalenciagaBagImage} alt={`Balenciaga Bag`} /></Link>}
+                {index === 1 && <Link to={`/mall3/product${index + 1}`}><img className="product-image" src={BalenciagaShirtImage} alt={`Balenciaga Shirt`} /></Link>}
+                {index === 2 && <Link to={`/mall3/product${index + 1}`}><img className="product-image" src={BalenciagaShoesImage} alt={`Balenciaga Shoes`} /></Link>}
+                {index === 3 && <Link to={`/mall3/product${index + 1}`}><img className="product-image" src={BalenciagaSunglassesImage} alt={`Balenciaga Sunglasses`} /></Link>}
                 <h3><Link to={`/mall3/product${index + 1}`}>{item.getName()}</Link></h3>
                 <p>${item.getPrice().toFixed(2)}</p>
               </li>

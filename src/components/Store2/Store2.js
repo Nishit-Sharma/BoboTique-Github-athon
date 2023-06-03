@@ -31,10 +31,10 @@ function Store2() {
           <ul>
             {myMall.itemList.map((item, index) => (
               <li key={index}>
-                {index === 0 && <img className="product-image" src={LVBriefcaseImage} alt={`Louis Vuitton Briefcase`} />}
-                {index === 1 && <img className="product-image" src={LVCapImage} alt={`Louis Vuitton Cap`} />}
-                {index === 2 && <img className="product-image" src={LVPurseImage} alt={`Louis Vuitton Purse`} />}
-                {index === 3 && <img className="product-image" src={LVSneakersImage} alt={`Louis Vuitton Sneakers`} />}
+                {index === 0 && <Link to={`/mall2/product${index + 1}`}><img className="product-image" src={LVBriefcaseImage} alt={`Louis Vuitton Briefcase`} /></Link>}
+                {index === 1 && <Link to={`/mall2/product${index + 1}`}><img className="product-image" src={LVCapImage} alt={`Louis Vuitton Cap`} /></Link>}
+                {index === 2 && <Link to={`/mall2/product${index + 1}`}><img className="product-image" src={LVPurseImage} alt={`Louis Vuitton Purse`} /></Link>}
+                {index === 3 && <Link to={`/mall2/product${index + 1}`}><img className="product-image" src={LVSneakersImage} alt={`Louis Vuitton Sneakers`} /></Link>}
                 <h3><Link to={`/mall2/product${index + 1}`}>{item.getName()}</Link></h3>
                 <p>${item.getPrice().toFixed(2)}</p>
               </li>
