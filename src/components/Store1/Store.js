@@ -33,9 +33,12 @@ function Store() {
             {myMall.itemList.map((item, index) => (
               <li key={index}>
                 {index === 0 && <Link to={`/mall1/product${index + 1}`}><img className="product-image" src={GucciBeltImage} alt={`Gucci Belt`} /></Link>}
-                {index === 1 && <img className="product-image" src={GucciHatImage} alt={`Gucci Bucket Hat`} />}
+                {index === 1 && <Link to={`/mall1/product${index + 1}`}><img className="product-image" src={GucciHatImage} alt={`Gucci Bucket Hat`} /></Link>}
+                {index === 2 && <Link to={`/mall1/product${index + 1}`}><img className="product-image" src={GucciShoesImage} alt={`Gucci Shoes`} /></Link>}
+                {index === 3 && <Link to={`/mall1/product${index + 1}`}><img className="product-image" src={GucciWalletImage} alt={`Gucci Wallet`} /></Link>}
+                {/* {index === 1 && <img className="product-image" src={GucciHatImage} alt={`Gucci Bucket Hat`} />}
                 {index === 2 && <img className="product-image" src={GucciShoesImage} alt={`Gucci Shoes`} />}
-                {index === 3 && <img className="product-image" src={GucciWalletImage} alt={`Gucci Wallet`} />}
+                {index === 3 && <img className="product-image" src={GucciWalletImage} alt={`Gucci Wallet`} />} */}
                 <h3><Link to={`/mall1/product${index + 1}`}>{item.getName()}</Link></h3>
                 <p>${item.getPrice().toFixed(2)}</p>
               </li>
