@@ -143,11 +143,14 @@ nav ul li a {
 .storeBox h2 {
   font-size: 36px;
   margin-bottom: 20px;
+  color: #333;
+  text-align: center;
 }
 
 .storeBox p {
   font-size: 18px;
   margin-bottom: 20px;
+  color: #777;
 }
 
 .logo-size {
@@ -157,7 +160,7 @@ nav ul li a {
 /* Layout */
 .Layout {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 80px auto 0; /* Adjust the top margin to accommodate the header */
   padding: 20px;
 }
 
@@ -230,12 +233,21 @@ nav ul li a {
 /* Product */
 .Product {
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px; /* Adjust the margin to provide space for the header */
+  min-height: calc(100vh - 80px); /* Subtract the header height from the viewport height */
+  text-align: center;
 }
 
 .Product img {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .Product h2 {
@@ -257,6 +269,7 @@ nav ul li a {
   cursor: pointer;
   font-size: 16px;
 }
+
 
 /* Cart */
 .Cart {
