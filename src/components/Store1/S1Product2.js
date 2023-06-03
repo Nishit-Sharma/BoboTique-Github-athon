@@ -4,6 +4,8 @@ import {useSpring, animated} from 'react-spring'
 import Layout from '../Layout.js'; 
 import { Mall1, Item, total } from '../MallScript';
 
+import GucciHatImage from '../static/Gucci_Hat.png';
+
 function S1Product2() {
   const props = useSpring({
     to: { opacity: 1},
@@ -12,7 +14,7 @@ function S1Product2() {
   });
 
   const handleAddToCart = () => {
-    const product = new Item("Product 2", 10.00); 
+    const product = new Item("Gucci Bucket Hat", 10.00); 
     Mall1.addItem(product);
     total += 10;
     console.log("Item added to cart!");
@@ -22,8 +24,8 @@ function S1Product2() {
     <animated.div style = {props}>
       <Layout>
       <div className="Product">
-        <h2>Product Name</h2>
-        <img src="product.png" alt="Product" />
+        <h2>Gucci Bucket Hat</h2>
+        <img src={GucciHatImage} alt="Product" />
         <p>Description of the product.</p>
         <p>$10.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>

@@ -47,8 +47,8 @@ function Cart() {
             <h3>{item.getName()}</h3>
             <p>${item.getPrice().toFixed(2)}</p>
             <p>Store: {findStore(item)}</p>
-            <button onClick={() => removeItem(item)}>Remove Item</button>
-          </li>
+             <button onClick={() => removeItem(item)}>Remove Item</button>
+           </li>
         ))}
       </ul>
     );
@@ -58,7 +58,7 @@ function Cart() {
   return (
     <animated.div style={props}>
       <Layout>
-        <div className="storeBox">
+        <div className="Cart">
           <h2>Shopping Cart</h2>
           <ul>
             {displayItems()}
