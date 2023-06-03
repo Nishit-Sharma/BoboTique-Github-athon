@@ -4,6 +4,11 @@ import Layout from './Layout.js';
 import { useSpring, animated } from 'react-spring';
 import { Mall1, Mall2, Mall3, Mall4, total } from './MallScript.js';
 
+import GucciBeltImage from './static/Gucci_Belt.png';
+import GucciHatImage from './static/Gucci_Hat.png';
+import GucciShoesImage from './static/Gucci_Shoes.png';
+import GucciWalletImage from './static/Gucci_Wallet.png';
+
 function Cart() {
   const props = useSpring({
     to: { opacity: 1 },
@@ -52,11 +57,13 @@ function Cart() {
           <div key={rowIndex} className="cart-item-row">
             {row.map((item, itemIndex) => (
               <div key={itemIndex} className="cart-item">
-                <img
+                {/* If item.getName() = Gucci Belt, it shows the image of the gucci belt */}
+                {item.getName() === "Gucci Belt" && <img src={GucciBeltImage} alt={`Gucci Belt`} className="cart-item-image" />}
+                {/* <img
                   src={`product${itemIndex + 1}.png`}
                   alt={`Product ${itemIndex + 1}`}
                   className="cart-item-image"
-                />
+                /> */}
                 <div className="cart-item-details">
                   <h4 className="cart-item-name">{item.getName()}</h4>
                   <p className="cart-item-price">${item.getPrice().toFixed(2)}</p>
