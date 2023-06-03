@@ -21,6 +21,7 @@ function S1Product1() {
   return (
     <animated.div style = {props}>
       <Layout>
+        
         <h2>Product Name</h2>
         <img src="product.png" alt="Product" />
         <p>Description of the product.</p>
