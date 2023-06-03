@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom';
 import {useSpring, animated} from 'react-spring'
 import { Mall, Item } from '../MallScript.js';
 
+import BalenciagaBagImage from '../static/Balenciaga_Bag.png';
+import BalenciagaShirtImage from '../static/Balenciaga_Shirt.png';
+import BalenciagaShoesImage from '../static/Balenciaga_Shoes.png';
+import BalenciagaSunglassesImage from '../static/Balenciaga_Sunglasses.png';
+
 function Store3() {
   const props = useSpring({
     to: { opacity: 1},
@@ -13,21 +18,24 @@ function Store3() {
   });
 
   const myMall = new Mall("Balenciaga");
-  myMall.addItem(new Item("Product 1", 10));
-  myMall.addItem(new Item("Product 2", 20));
-  myMall.addItem(new Item("Product 3", 30));
-  myMall.addItem(new Item("Product 4", 40));
+  myMall.addItem(new Item("Balenciaga Bag", 10));
+  myMall.addItem(new Item("Balenciaga Shirt", 20));
+  myMall.addItem(new Item("Balenciaga Shoes", 30));
+  myMall.addItem(new Item("Balenciaga Sunglasses", 40));
 
   return (
     <animated.div style={props}>
       <Layout>
-        <div className="storeBox">
-          <h2>{myMall.getMallName()}</h2>
+        <div className="Store">
+          <h2 className="store-header">Balenciaga</h2>
           <ul>
             {myMall.itemList.map((item, index) => (
               <li key={index}>
-                <img src={`product${index + 1}.png`} alt={`Product ${index + 1}`} />
-                <h3><Link to={`/mall3/product${index + 1}`}>{item.getName()}</Link></h3>
+                {index === 0 && <img className="product-image" src={BalenciagaBagImage} alt={`Balenciaga Bag`} />}
+                {index === 1 && <img className="product-image" src={BalenciagaShirtImage} alt={`Balenciaga Shirt`} />}
+                {index === 2 && <img className="product-image" src={BalenciagaShoesImage} alt={`Balenciaga Shoes`} />}
+                {index === 3 && <img className="product-image" src={BalenciagaSunglassesImage} alt={`Balenciaga Sunglasses`} />}
+                <h3><Link to={`/mall1/product${index + 1}`}>{item.getName()}</Link></h3>
                 <p>${item.getPrice().toFixed(2)}</p>
               </li>
             ))}

@@ -129,30 +129,6 @@ nav ul li a {
   margin-bottom: 20px;
 }
 
-.storeBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Set the height to 100% of the viewport height */
-  padding: 20px;
-  max-width: 800px; /* Optional: Limit the width of the store container */
-  margin: auto; /* Center horizontally and vertically */
-}
-
-.storeBox h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: center;
-}
-
-.storeBox p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #777;
-}
-
 .logo-size {
   width: 150px;
 }
@@ -168,11 +144,21 @@ nav ul li a {
 .Store {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center; /* Horizontally center the products */
+  align-items: center; /* Vertically center the products */
   gap: 20px;
   padding: 50px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 800px; /* Set a maximum width for the container */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center;
+  margin-top: 120px; /* Add margin to the top to create space for the header */
+  margin-bottom: 80px; /* Add margin to the bottom to create space for the footer */
 }
 
 .Store img {
@@ -209,6 +195,16 @@ nav ul li a {
   background-color: #555;
 }
 
+.Store ul {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center; /* Horizontally center the products within the grid */
+  align-items: flex-start; /* Align products to the top of each grid cell */
+  gap: 20px;
+}
+
 .Store li {
   list-style-type: none;
   text-align: center;
@@ -228,6 +224,23 @@ nav ul li a {
   margin-bottom: 20px;
   text-align: center;
   color: #333;
+}
+
+.store-header {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  margin-top: 20px; /* Add margin to the top to separate from the header */
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Product */
@@ -312,12 +325,12 @@ nav ul li a {
 /* Footer */
 .footer {
   background-color: #200c4c;
-  padding: 20px;
   text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 999; /* Ensure the footer is above other elements */
 }
 
 .footer-text {

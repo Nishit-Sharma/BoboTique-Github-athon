@@ -21,11 +21,13 @@ function S1Product1() {
   return (
     <animated.div style={props}>
       <Layout>
+      <div className="Product">
         <h2>Product Name</h2>
         <img src="product.png" alt="Product" />
         <p>Description of the product.</p>
         <p>$10.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
+      </div>
       </Layout>
     </animated.div>
   );
