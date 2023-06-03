@@ -15,9 +15,9 @@ function S4Product3() {
   });
 
   const handleAddToCart = () => {
-    const product = new Item('Rolex Watch 3', 10.0);
+    const product = new Item('Rolex Watch 3', 1000.0);
     Mall4.addItem(product);
-    total += 10;
+    total += 1000;
     console.log('Item added to cart!');
   };
 
@@ -27,8 +27,8 @@ function S4Product3() {
       <div className="Product">
         <h2>Rolex Watch 3</h2>
         <img src={RolexWatch3} alt="Product" />
-        <p>Description of the product.</p>
-        <p>$10.00</p>
+        <p>The Rolex Watch is a pinnacle of luxury timepieces, renowned for its precision, craftsmanship, and timeless design, representing a symbol of prestige and sophistication.</p>
+        <p>$1000.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
       </Layout>

@@ -14,9 +14,9 @@ function S2Product2() {
   });
 
   const handleAddToCart = () => {
-    const product = new Item('Louis Vuitton Cap', 10.0);
+    const product = new Item('Louis Vuitton Cap', 25.00);
     Mall2.addItem(product);
-    total += 10;
+    total += 25;
     console.log('Item added to cart!');
   };
 
@@ -26,8 +26,8 @@ function S2Product2() {
       <div className="Product">
         <h2>Louis Vuitton Cap</h2>
         <img src={LVCapImage} alt="Product" />
-        <p>Description of the product.</p>
-        <p>$10.00</p>
+        <p>The Louis Vuitton Cap is a fashion-forward headwear essential, featuring the iconic LV monogram, superior craftsmanship, and a sleek design that effortlessly combines luxury and streetwear aesthetics.</p>
+        <p>$25.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
         </div>
       </Layout>

@@ -26,8 +26,8 @@ function S1Product3() {
       <div className="Product">
         <h2>Gucci Shoes</h2>
         <img src={GucciShoesImage} alt="Product" />
-        <p>Description of the product.</p>
-        <p>$10.00</p>
+        <p>The Gucci Shoe is the epitome of luxury footwear, showcasing impeccable Italian craftsmanship, distinctive designs, and premium materials that exude elegance and style.</p>
+        <p>$75.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
       </Layout>

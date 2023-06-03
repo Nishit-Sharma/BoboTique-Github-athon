@@ -26,8 +26,8 @@ function S1Product1() {
       <div className="Product">
         <h2>Gucci Belt</h2>
         <img src={GucciBeltImage} alt="Product" />
-        <p>Description of the product.</p>
-        <p>$10.00</p>
+        <p>The Gucci Belt is a luxurious and iconic accessory that seamlessly combines Italian craftsmanship, timeless design, and the brand's signature double-G logo for a stylish and statement-making addition to any outfit.</p>
+        <p>$15.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
       </Layout>

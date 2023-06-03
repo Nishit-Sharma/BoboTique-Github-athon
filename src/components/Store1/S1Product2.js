@@ -26,8 +26,8 @@ function S1Product2() {
       <div className="Product">
         <h2>Gucci Bucket Hat</h2>
         <img src={GucciHatImage} alt="Product" />
-        <p>Description of the product.</p>
-        <p>$10.00</p>
+        <p>The Gucci Bucket Hat effortlessly blends high-fashion flair with casual streetwear vibes, featuring the iconic GG motif and superior craftsmanship to elevate your headwear game.</p>
+        <p>$34.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
       </Layout>

@@ -14,9 +14,9 @@ function S2Product1() {
   });
 
   const handleAddToCart = () => {
-    const product = new Item('Louis Vuitton Briefcase', 10.0);
+    const product = new Item('Louis Vuitton Briefcase', 25.00);
     Mall2.addItem(product);
-    total += 10;
+    total += 25;
     console.log('Item added to cart!');
   };
 
@@ -26,8 +26,8 @@ function S2Product1() {
       <div className="Product">
         <h2>Louis Vuitton Briefcase</h2>
         <img src={LVBriefcaseImage} alt="Product" />
-        <p>Description of the product.</p>
-        <p>$10.00</p>
+        <p>The Louis Vuitton Briefcase is a timeless and prestigious statement piece, meticulously crafted with the brand's signature monogram canvas and exquisite leather trim, offering unparalleled style and functionality for the discerning professional.</p>
+        <p>$25.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
       </Layout>

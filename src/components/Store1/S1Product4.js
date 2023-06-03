@@ -26,8 +26,8 @@ function S1Product4() {
       <div className="Product">
         <h2>Gucci Wallet</h2>
         <img src={GucciWalletImage} alt="Product" />
-        <p>Description of the product.</p>
-        <p>$10.00</p>
+        <p>The Gucci Wallet is a refined accessory that fuses opulent craftsmanship, premium materials, and iconic design elements, providing both practicality and sophistication for the modern individual.</p>
+        <p>$50.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
       </Layout>

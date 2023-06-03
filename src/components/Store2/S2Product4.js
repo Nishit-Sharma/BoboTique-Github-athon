@@ -14,9 +14,9 @@ function S2Product4() {
   });
 
   const handleAddToCart = () => {
-    const product = new Item('Louis Vuitton Sneakers', 10.0);
+    const product = new Item('Louis Vuitton Sneakers', 70.00);
     Mall2.addItem(product);
-    total += 10;
+    total += 70;
     console.log('Item added to cart!');
   };
 
@@ -26,8 +26,8 @@ function S2Product4() {
       <div className="Product">
         <h2>Louis Vuitton Sneakers</h2>
         <img src={LVSneakersImage} alt="Product" />
-        <p>Description of the product.</p>
-        <p>$10.00</p>
+        <p>The Louis Vuitton Sneakers are a perfect fusion of luxury and streetwear, featuring the brand's iconic monogram, premium materials, and impeccable craftsmanship, delivering both style and comfort for the fashion-conscious individual.</p>
+        <p>$70.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
         </div>
       </Layout>

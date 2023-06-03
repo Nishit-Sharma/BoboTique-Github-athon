@@ -16,9 +16,9 @@ function S3Product2() {
   });
 
   const handleAddToCart = () => {
-    const product = new Item('Balenciaga Shirt', 10.0);
+    const product = new Item('Balenciaga Shirt', 25.00);
     Mall3.addItem(product);
-    total += 10;
+    total += 25;
     console.log('Item added to cart!');
   };
 
@@ -28,8 +28,8 @@ function S3Product2() {
       <div className="Product">
         <h2>Balenciaga Shirt</h2>
         <img src={BalenciagaShirtImage} alt="Product" />
-        <p>Description of the product.</p>
-        <p>$10.00</p>
+        <p>The Balenciaga Shirt epitomizes contemporary fashion with its cutting-edge designs, premium fabrics, and distinctive details, ensuring a stylish and edgy look that sets you apart from the crowd.</p>
+        <p>$25.00</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
       </Layout>
