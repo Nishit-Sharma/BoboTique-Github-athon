@@ -14,9 +14,9 @@ function S1Product4() {
   });
 
   const handleAddToCart = () => {
-    const product = new Item("Gucci Wallet", 10.00); 
+    const product = new Item("Gucci Wallet", 50.00); 
     Mall1.addItem(product);
-    total += 10;
+    total += 50;
     console.log("Item added to cart!");
   }
 

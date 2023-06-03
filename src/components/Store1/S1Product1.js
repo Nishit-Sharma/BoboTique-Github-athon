@@ -14,9 +14,9 @@ function S1Product1() {
   });
 
   const handleAddToCart = () => {
-    const product = new Item('Gucci Belt', 10.0);
+    const product = new Item('Gucci Belt', 15.00);
     Mall1.addItem(product);
-    total += 10;
+    total += 15;
     console.log('Item added to cart!');
   };
 

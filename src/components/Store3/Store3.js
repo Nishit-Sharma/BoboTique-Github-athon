@@ -18,10 +18,10 @@ function Store3() {
   });
 
   const myMall = new Mall("Balenciaga");
-  myMall.addItem(new Item("Balenciaga Bag", 10));
-  myMall.addItem(new Item("Balenciaga Shirt", 20));
-  myMall.addItem(new Item("Balenciaga Shoes", 30));
-  myMall.addItem(new Item("Balenciaga Sunglasses", 40));
+  myMall.addItem(new Item("Balenciaga Bag", 313));
+  myMall.addItem(new Item("Balenciaga Shirt", 25));
+  myMall.addItem(new Item("Balenciaga Shoes", 75));
+  myMall.addItem(new Item("Balenciaga Sunglasses", 150));
 
   return (
     <animated.div style={props}>

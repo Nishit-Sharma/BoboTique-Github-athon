@@ -18,10 +18,10 @@ function Store4() {
   });
 
   const myMall = new Mall("Rolex");
-  myMall.addItem(new Item("Rolex Watch 1", 10));
-  myMall.addItem(new Item("Rolex Watch 2", 20));
-  myMall.addItem(new Item("Rolex Watch 3", 30));
-  myMall.addItem(new Item("Rolex Watch 4", 40));
+  myMall.addItem(new Item("Rolex Watch 1", 1000));
+  myMall.addItem(new Item("Rolex Watch 2", 1000));
+  myMall.addItem(new Item("Rolex Watch 3", 1000));
+  myMall.addItem(new Item("Rolex Watch 4", 1000));
 
   return (
     <animated.div style={props}>

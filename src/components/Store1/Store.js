@@ -19,10 +19,10 @@ function Store() {
   });
 
   const myMall = new Mall("Gucci");
-  myMall.addItem(new Item("Gucci Belt", 10));
-  myMall.addItem(new Item("Gucci Bucket Hat", 20));
-  myMall.addItem(new Item("Gucci Shoes", 30));
-  myMall.addItem(new Item("Gucci Wallet", 40));
+  myMall.addItem(new Item("Gucci Belt", 15));
+  myMall.addItem(new Item("Gucci Bucket Hat", 34));
+  myMall.addItem(new Item("Gucci Shoes", 75));
+  myMall.addItem(new Item("Gucci Wallet", 50));
 
   return (
     <animated.div style={props}>
