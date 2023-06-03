@@ -12,7 +12,7 @@ function Store3() {
     delay: 300,
   });
 
-  const myMall = new Mall("My Mall");
+  const myMall = new Mall("Balenciaga");
   myMall.addItem(new Item("Product 1", 10));
   myMall.addItem(new Item("Product 2", 20));
   myMall.addItem(new Item("Product 3", 30));
