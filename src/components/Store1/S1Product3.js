@@ -14,9 +14,9 @@ function S1Product3() {
   });
 
   const handleAddToCart = () => {
-    const product = new Item("Gucci Shoes", 10.00); 
+    const product = new Item("Gucci Shoes", 75.00); 
     Mall1.addItem(product);
-    total += 10;
+    total += 75;
     console.log("Item added to cart!");
   }
 

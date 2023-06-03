@@ -14,9 +14,9 @@ function S1Product2() {
   });
 
   const handleAddToCart = () => {
-    const product = new Item("Gucci Bucket Hat", 10.00); 
+    const product = new Item("Gucci Bucket Hat", 34.00); 
     Mall1.addItem(product);
-    total += 10;
+    total += 34;
     console.log("Item added to cart!");
   }
 

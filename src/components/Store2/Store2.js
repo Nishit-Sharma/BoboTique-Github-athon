@@ -18,10 +18,10 @@ function Store2() {
   });
 
   const myMall = new Mall("Louis Vuitton");
-  myMall.addItem(new Item("Louis Vuitton Briefcase", 10));
-  myMall.addItem(new Item("Louis Vuitton Cap", 20));
-  myMall.addItem(new Item("Louis Vuitton Purse", 30));
-  myMall.addItem(new Item("Louis Vuitton Sneakers", 40));
+  myMall.addItem(new Item("Louis Vuitton Briefcase", 25));
+  myMall.addItem(new Item("Louis Vuitton Cap", 25));
+  myMall.addItem(new Item("Louis Vuitton Purse", 160));
+  myMall.addItem(new Item("Louis Vuitton Sneakers", 70));
 
   return (
     <animated.div style={props}>
