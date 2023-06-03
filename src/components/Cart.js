@@ -39,29 +39,40 @@ function Cart() {
   const displayItems = () => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
     const items = malls.flatMap((mall) => mall.itemList);
+  
+    const rows = [];
+    for (let i = 0; i < items.length; i += 4) {
+      const rowItems = items.slice(i, i + 4);
+      rows.push(rowItems);
+    }
+  
     return (
-      <ul className="cart-item-list">
-        {items.map((item, index) => (
-          <li key={index} className="cart-item">
-            <img
-              src={`product${index + 1}.png`}
-              alt={`Product ${index + 1}`}
-              className="cart-item-image"
-            />
-            <div className="cart-item-details">
-              <h4 className="cart-item-name">{item.getName()}</h4>
-              <p className="cart-item-price">${item.getPrice().toFixed(2)}</p>
-              <p className="cart-item-store">Store: {findStore(item)}</p>
-              <button
-                onClick={() => removeItem(item)}
-                className="cart-item-remove"
-              >
-                Remove Item
-              </button>
-            </div>
-          </li>
+      <div className="cart-item-list">
+        {rows.map((row, rowIndex) => (
+          <div key={rowIndex} className="cart-item-row">
+            {row.map((item, itemIndex) => (
+              <div key={itemIndex} className="cart-item">
+                <img
+                  src={`product${itemIndex + 1}.png`}
+                  alt={`Product ${itemIndex + 1}`}
+                  className="cart-item-image"
+                />
+                <div className="cart-item-details">
+                  <h4 className="cart-item-name">{item.getName()}</h4>
+                  <p className="cart-item-price">${item.getPrice().toFixed(2)}</p>
+                  <p className="cart-item-store">Store: {findStore(item)}</p>
+                  <button
+                    onClick={() => removeItem(item)}
+                    className="cart-item-remove"
+                  >
+                    Remove Item
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         ))}
-      </ul>
+      </div>
     );
   };
 
