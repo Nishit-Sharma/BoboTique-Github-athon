@@ -35,7 +35,7 @@ function Store3() {
                 {index === 1 && <img className="product-image" src={BalenciagaShirtImage} alt={`Balenciaga Shirt`} />}
                 {index === 2 && <img className="product-image" src={BalenciagaShoesImage} alt={`Balenciaga Shoes`} />}
                 {index === 3 && <img className="product-image" src={BalenciagaSunglassesImage} alt={`Balenciaga Sunglasses`} />}
-                <h3><Link to={`/mall1/product${index + 1}`}>{item.getName()}</Link></h3>
+                <h3><Link to={`/mall3/product${index + 1}`}>{item.getName()}</Link></h3>
                 <p>${item.getPrice().toFixed(2)}</p>
               </li>
             ))}

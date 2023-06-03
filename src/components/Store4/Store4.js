@@ -35,7 +35,7 @@ function Store4() {
                   {index === 1 && <img className="product-image" src={RolexWatch2} alt={`Rolex Watch 2`} />}
                   {index === 2 && <img className="product-image" src={RolexWatch3} alt={`Rolex Watch 3`} />}
                   {index === 3 && <img className="product-image" src={RolexWatch4} alt={`Rolex Watch 4`} />}
-                  <h3><Link to={`/mall1/product${index + 1}`}>{item.getName()}</Link></h3>
+                  <h3><Link to={`/mall4/product${index + 1}`}>{item.getName()}</Link></h3>
                   <p>${item.getPrice().toFixed(2)}</p>
                 </li>
               ))}
