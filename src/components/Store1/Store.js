@@ -4,7 +4,7 @@ import Layout from '../Layout.js';
 import '../Global.css';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
-import { Mall, Item, Mall1 } from '../MallScript.js';
+import { Mall, Item } from '../MallScript.js';
 
 import GucciBeltImage from '../static/Gucci_Belt.png';
 import GucciHatImage from '../static/Gucci_Hat.png';
