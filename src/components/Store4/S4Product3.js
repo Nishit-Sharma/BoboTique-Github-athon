@@ -2,6 +2,10 @@ import React from 'react';
 import '../Global.css';
 import {useSpring, animated} from 'react-spring'
 import Layout from '../Layout.js'; 
+import { Mall4, Item, total } from '../MallScript';
+
+import RolexWatch3 from '../static/Rolex_Watch_3.png';
+
 
 function S4Product3() {
   const props = useSpring({
@@ -10,15 +14,22 @@ function S4Product3() {
     delay: 300,
   });
 
+  const handleAddToCart = () => {
+    const product = new Item('Rolex Watch 3', 10.0);
+    Mall4.addItem(product);
+    total += 10;
+    console.log('Item added to cart!');
+  };
+
   return (
     <animated.div style = {props}>
       <Layout>
       <div className="Product">
-        <h2>Product Name</h2>
-        <img src="product.png" alt="Product" />
+        <h2>Rolex Watch 3</h2>
+        <img src={RolexWatch3} alt="Product" />
         <p>Description of the product.</p>
         <p>$10.00</p>
-        <button>Add to Cart</button>
+        <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
       </Layout>
     </animated.div>
