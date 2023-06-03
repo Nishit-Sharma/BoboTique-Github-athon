@@ -9,6 +9,21 @@ import GucciHatImage from './static/Gucci_Hat.png';
 import GucciShoesImage from './static/Gucci_Shoes.png';
 import GucciWalletImage from './static/Gucci_Wallet.png';
 
+import LVBriefcaseImage from './static/LV_Briefcase.png';
+import LVCapImage from './static/LV_Cap.png';
+import LVPurseImage from './static/LV_Purse.png';
+import LVSneakersImage from './static/LV_Sneakers.png';
+
+import BalenciagaBagImage from './static/Balenciaga_Bag.png';
+import BalenciagaShirtImage from './static/Balenciaga_Shirt.png';
+import BalenciagaShoesImage from './static/Balenciaga_Shoes.png';
+import BalenciagaSunglassesImage from './static/Balenciaga_Sunglasses.png';
+
+import RolexWatch1 from './static/Rolex_Watch_1.png';
+import RolexWatch2 from './static/Rolex_Watch_2.png';
+import RolexWatch3 from './static/Rolex_Watch_3.png';
+import RolexWatch4 from './static/Rolex_Watch_4.png';
+
 function Cart() {
   const props = useSpring({
     to: { opacity: 1 },
@@ -57,13 +72,27 @@ function Cart() {
           <div key={rowIndex} className="cart-item-row">
             {row.map((item, itemIndex) => (
               <div key={itemIndex} className="cart-item">
-                {/* If item.getName() = Gucci Belt, it shows the image of the gucci belt */}
+
                 {item.getName() === "Gucci Belt" && <img src={GucciBeltImage} alt={`Gucci Belt`} className="cart-item-image" />}
-                {/* <img
-                  src={`product${itemIndex + 1}.png`}
-                  alt={`Product ${itemIndex + 1}`}
-                  className="cart-item-image"
-                /> */}
+                {item.getName() === "Gucci Bucket Hat" && <img src={GucciHatImage} alt={`Gucci Bucket Hat`} className="cart-item-image" />}
+                {item.getName() === "Gucci Shoes" && <img src={GucciShoesImage} alt={`Gucci Shoes`} className="cart-item-image" />}
+                {item.getName() === "Gucci Wallet" && <img src={GucciWalletImage} alt={`Gucci Wallet`} className="cart-item-image" />}
+
+                {item.getName() === "Louis Vuitton Briefcase" && <img src={LVBriefcaseImage} alt={`Louis Vuitton Briefcase`} className="cart-item-image" />}
+                {item.getName() === "Louis Vuitton Cap" && <img src={LVCapImage} alt={`Louis Vuitton Cap`} className="cart-item-image" />}
+                {item.getName() === "Louis Vuitton Purse" && <img src={LVPurseImage} alt={`Louis Vuitton Purse`} className="cart-item-image" />}
+                {item.getName() === "Louis Vuitton Sneakers" && <img src={LVSneakersImage} alt={`Louis Vuitton Sneakers`} className="cart-item-image" />}
+
+                {item.getName() === "Balenciaga Bag" && <img src={BalenciagaBagImage} alt={`Balenciaga Bag`} className="cart-item-image" />}
+                {item.getName() === "Balenciaga Shirt" && <img src={BalenciagaShirtImage} alt={`Balenciaga Shirt`} className="cart-item-image" />}
+                {item.getName() === "Balenciaga Shoes" && <img src={BalenciagaShoesImage} alt={`Balenciaga Shoes`} className="cart-item-image" />}
+                {item.getName() === "Balenciaga Sunglasses" && <img src={BalenciagaSunglassesImage} alt={`Balenciaga Sunglasses`} className="cart-item-image" />}
+
+                {item.getName() === "Rolex Watch 1" && <img src={RolexWatch1} alt={`Rolex Watch 1`} className="cart-item-image" />}
+                {item.getName() === "Rolex Watch 2" && <img src={RolexWatch2} alt={`Rolex Watch 2`} className="cart-item-image" />}
+                {item.getName() === "Rolex Watch 3" && <img src={RolexWatch3} alt={`Rolex Watch 3`} className="cart-item-image" />}
+                {item.getName() === "Rolex Watch 4" && <img src={RolexWatch4} alt={`Rolex Watch 4`} className="cart-item-image" />}
+
                 <div className="cart-item-details">
                   <h4 className="cart-item-name">{item.getName()}</h4>
                   <p className="cart-item-price">${item.getPrice().toFixed(2)}</p>
