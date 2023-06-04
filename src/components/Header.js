@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Global.css';
 import image from './static/icooked.png';
-import totalItems from './MallScript.js';
+import { totalItems } from './MallScript.js';
 
 function Header() {
   return (
