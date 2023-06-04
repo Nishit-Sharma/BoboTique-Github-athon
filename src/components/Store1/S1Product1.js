@@ -13,12 +13,17 @@ function S1Product1() {
     delay: 300,
   });
 
+  // Update the state when handleAddToCart is called
+  const [cart, setCart] = useState([]);
+  
+
   const handleAddToCart = () => {
     const product = new Item('Gucci Belt', 15.00);
     Mall1.addItem(product);
     total += 15;
     totalItems += 1;
     console.log('Item added to cart!');
+    setCart([...cart, product]);
   };
 
   return (
