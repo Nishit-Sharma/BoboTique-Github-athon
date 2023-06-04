@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Global.css';
 import Layout from './Layout.js';
 import { useSpring, animated } from 'react-spring';
-import { Mall1, Mall2, Mall3, Mall4, total } from './MallScript.js';
+import { Mall1, Mall2, Mall3, Mall4, total, totalItems } from './MallScript.js';
 
 import GucciBeltImage from './static/Gucci_Belt.png';
 import GucciHatImage from './static/Gucci_Hat.png';
@@ -32,6 +32,7 @@ function Cart() {
   });
 
   const [cartItems, setCartItems] = useState([]);
+  const [cart, setCart] = useState([]);
 
   const removeItem = (item) => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
@@ -44,6 +45,8 @@ function Cart() {
     const newCartItems = cartItems.filter((cartItem) => cartItem !== item);
     setCartItems(newCartItems);
     total -= item.getPrice();
+    totalItems-= 1;
+    setCart([...cart, product]);
   };
 
   const findStore = (item) => {
