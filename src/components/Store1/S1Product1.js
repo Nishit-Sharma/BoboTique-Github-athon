@@ -2,7 +2,7 @@ import React from 'react';
 import '../Global.css';
 import { useSpring, animated } from 'react-spring';
 import Layout from '../Layout.js';
-import { Mall1, Item, total } from '../MallScript';
+import { Mall1, Item, total, totalItems } from '../MallScript';
 
 import GucciBeltImage from '../static/Gucci_Belt.png';
 
@@ -17,6 +17,7 @@ function S1Product1() {
     const product = new Item('Gucci Belt', 15.00);
     Mall1.addItem(product);
     total += 15;
+    totalItems += 1;
     console.log('Item added to cart!');
   };
 

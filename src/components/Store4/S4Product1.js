@@ -2,7 +2,7 @@ import React from 'react';
 import '../Global.css';
 import {useSpring, animated} from 'react-spring'
 import Layout from '../Layout.js'; 
-import { Mall4, Item, total } from '../MallScript';
+import { Mall4, Item, total, totalItems } from '../MallScript';
 
 import RolexWatch1 from '../static/Rolex_Watch_1.png';
 
@@ -17,6 +17,7 @@ function S4Product1() {
     const product = new Item('Rolex Watch 1', 1000.00);
     Mall4.addItem(product);
     total += 1000;
+    totalItems += 1;
     console.log('Item added to cart!');
   };
 

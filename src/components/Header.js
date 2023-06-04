@@ -2,11 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Global.css';
 import image from './static/icooked.png';
-import { Mall1, Mall2, Mall3, Mall4 } from './MallScript.js';
-
-function getTotalItems() {
-  return Mall1.length + Mall2.length + Mall3.length + Mall4.length;
-}
+import totalItems from './MallScript.js';
 
 function Header() {
   return (
@@ -22,7 +18,7 @@ function Header() {
             <Link to="/">Home</Link>
           </li>
           <li className="cart">
-            <Link to="/cart">Cart ({getTotalItems()})</Link>
+            <Link to="/cart">Cart ({totalItems})</Link>
           </li>
         </ul>
       </nav>

@@ -2,7 +2,7 @@ import React from 'react';
 import '../Global.css';
 import {useSpring, animated} from 'react-spring'
 import Layout from '../Layout.js';
-import { Mall3, Item, total } from '../MallScript';
+import { Mall3, Item, total, totalItems } from '../MallScript';
 
 import BalenciagaBagImage from '../static/Balenciaga_Bag.png';
 
@@ -17,6 +17,7 @@ function S3Product1() {
     const product = new Item('Balenciaga Bag', 313.00);
     Mall3.addItem(product);
     total += 313;
+    totalItems += 1;
     console.log('Item added to cart!');
   };
 

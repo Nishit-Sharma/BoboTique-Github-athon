@@ -2,7 +2,7 @@ import React from 'react';
 import '../Global.css';
 import {useSpring, animated} from 'react-spring'
 import Layout from '../Layout.js';
-import { Mall2, Item, total } from '../MallScript';
+import { Mall2, Item, total, totalItems } from '../MallScript';
 
 import LVCapImage from '../static/LV_Cap.png';
 
@@ -17,6 +17,7 @@ function S2Product2() {
     const product = new Item('Louis Vuitton Cap', 25.00);
     Mall2.addItem(product);
     total += 25;
+    totalItems += 1;
     console.log('Item added to cart!');
   };
 
