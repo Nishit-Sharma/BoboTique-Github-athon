@@ -45,8 +45,8 @@ function Cart() {
     const newCartItems = cartItems.filter((cartItem) => cartItem !== item);
     setCartItems(newCartItems);
     total -= item.getPrice();
-    totalItems-= 1;
-    setCart([...cart, product]);
+    totalItems -= 1;
+    setCart([...cart, total]);
   };
 
   const findStore = (item) => {
