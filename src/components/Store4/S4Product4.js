@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Global.css';
 import {useSpring, animated} from 'react-spring'
 import Layout from '../Layout.js'; 
@@ -13,13 +13,17 @@ function S4Product4() {
     delay: 300,
   });
 
+  const [cart, setCart] = useState([]);
+
   const handleAddToCart = () => {
     const product = new Item('Rolex Watch 4', 1000.00);
     Mall4.addItem(product);
     total += 1000;
     totalItems += 1;
     console.log('Item added to cart!');
+    setCart([...cart, product]);
   };
+  
 
   return (
     <animated.div style = {props}>

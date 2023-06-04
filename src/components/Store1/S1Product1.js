@@ -13,7 +13,6 @@ function S1Product1() {
     delay: 300,
   });
 
-  // Update the state when handleAddToCart is called
   const [cart, setCart] = useState([]);
   
 

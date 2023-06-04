@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Global.css';
 import {useSpring, animated} from 'react-spring'
 import Layout from '../Layout.js'; 
@@ -14,12 +14,15 @@ function S3Product3() {
     delay: 300,
   });
 
+  const [cart, setCart] = useState([]);
+
   const handleAddToCart = () => {
     const product = new Item('Balenciaga Shoes', 75.00);
     Mall3.addItem(product);
     total += 75;
-      
+    totalItems += 1;
     console.log('Item added to cart!');
+    setCart([...cart, product]);
   };
 
   return (
