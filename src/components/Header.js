@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Global.css';
 import image from './static/icooked.png';
-import store from './MallScript.js';
+import { store } from './MallScript.js';
 
 
 const getTotalItems = () => {
