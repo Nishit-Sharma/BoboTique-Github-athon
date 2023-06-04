@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Global.css';
 import { useSpring, animated } from 'react-spring';
 import Layout from '../Layout.js';
