@@ -1,5 +1,5 @@
 // Store.js
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../Layout.js';
 import '../Global.css';
 import { Link } from 'react-router-dom';
