@@ -2,6 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Global.css';
 import image from './static/icooked.png';
+import store from './MallScript.js';
+
+
+const getTotalItems = () => {
+  let totalItems = 0;
+  for (let i = 0; i < store.length; i++) {
+    totalItems += store[i].items.length;
+  }
+  return totalItems;
+}
 
 function Header() {
   return (
@@ -16,9 +26,13 @@ function Header() {
           <li className="home">
             <Link to="/">Home</Link>
           </li>
+          {/* The total amount of items in all of the carts should be displayed as a badge next to cart */}
           <li className="cart">
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">Cart ({getTotalItems()})</Link>
           </li>
+          {/* <li className="cart">
+            <Link to="/cart">Cart</Link>
+          </li> */}
         </ul>
       </nav>
     </header>
