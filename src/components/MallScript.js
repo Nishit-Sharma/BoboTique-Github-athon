@@ -82,5 +82,6 @@ store.addMall(Mall3);
 store.addMall(Mall4);
 
 let total = 0;
+let totalItems = 0;
 
-export { Store, Mall, Item, store, Mall1, Mall2, Mall3, Mall4, total };
+export { Store, Mall, Item, store, Mall1, Mall2, Mall3, Mall4, total, totalItems };
