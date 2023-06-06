@@ -56,6 +56,9 @@ function Cart() {
       if (index !== -1) {
         return malls[i].getMallName();
       }
+      else {
+        console.log("Something went wrong");
+      }
     }
   };
 
