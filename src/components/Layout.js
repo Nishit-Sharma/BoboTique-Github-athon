@@ -6,6 +6,7 @@ import Footer from './Footer.js'
 const Layout = ({ children }) => {
     return (
       <div>
+        {/* This just makes it easier to use header and footer */}
         <Header />
         {children}
         <Footer />

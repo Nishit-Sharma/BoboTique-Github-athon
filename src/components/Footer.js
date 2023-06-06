@@ -1,6 +1,7 @@
 import React from 'react';
 import './Global.css';
 
+// Its just a footer lol?
 function Footer() {
   return (
     <footer className="footer">

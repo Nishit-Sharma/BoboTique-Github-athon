@@ -1,4 +1,3 @@
-// Store.js
 import Layout from '../Layout.js';
 import '../Global.css';
 import { Link } from 'react-router-dom';
@@ -17,6 +16,7 @@ function Store() {
     delay: 300,
   });
 
+  // Creating a new Mall object to make it easier to print
   const myMall = new Mall("Gucci");
   myMall.addItem(new Item("Gucci Belt", 15));
   myMall.addItem(new Item("Gucci Bucket Hat", 34));
@@ -29,8 +29,10 @@ function Store() {
         <div className="Store">
           <h2 className="store-header">Gucci</h2>
           <ul>
+            {/* Iterates through each item */}
             {myMall.itemList.map((item, index) => (
               <li key={index}>
+                {/* Checks what index the program is at and then returns the correct image */}
                 {index === 0 && <Link to={`/mall1/product${index + 1}`}><img className="product-image" src={GucciBeltImage} alt={`Gucci Belt`} /></Link>}
                 {index === 1 && <Link to={`/mall1/product${index + 1}`}><img className="product-image" src={GucciHatImage} alt={`Gucci Bucket Hat`} /></Link>}
                 {index === 2 && <Link to={`/mall1/product${index + 1}`}><img className="product-image" src={GucciShoesImage} alt={`Gucci Shoes`} /></Link>}

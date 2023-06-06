@@ -7,15 +7,18 @@ import { Mall1, Item, total, totalItems } from '../MallScript';
 import GucciBeltImage from '../static/Gucci_Belt.png';
 
 function S1Product1() {
+  // The thing for transitions
   const props = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 },
     delay: 300,
   });
 
+  // This updates the state which causes the page to refresh when something happens
   const [cart, setCart] = useState([]);
   
 
+  // Add to cart function
   const handleAddToCart = () => {
     const product = new Item('Gucci Belt', 15.00);
     Mall1.addItem(product);
@@ -26,6 +29,7 @@ function S1Product1() {
   };
 
   return (
+    // Html for stuff
     <animated.div style={props}>
       <Layout>
       <div className="Product">

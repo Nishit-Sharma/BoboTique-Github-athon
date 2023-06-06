@@ -4,6 +4,8 @@ import Layout from './Layout.js';
 import { useSpring, animated } from 'react-spring';
 import { Mall1, Mall2, Mall3, Mall4, total, totalItems } from './MallScript.js';
 
+// Importing all of the images
+
 import GucciBeltImage from './static/Gucci_Belt.png';
 import GucciHatImage from './static/Gucci_Hat.png';
 import GucciShoesImage from './static/Gucci_Shoes.png';
@@ -31,11 +33,14 @@ function Cart() {
     delay: 300,
   });
 
+  // Things to update the state
   const [cartItems, setCartItems] = useState([]);
   const [cart, setCart] = useState([]);
 
+  // Function for removing items from the malls
   const removeItem = (item) => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
+    // Iterates through the mall until it gets to the index and then removes it
     malls.forEach((mall) => {
       const index = mall.itemList.indexOf(item);
       if (index !== -1) {
@@ -44,13 +49,16 @@ function Cart() {
     });
     const newCartItems = cartItems.filter((cartItem) => cartItem !== item);
     setCartItems(newCartItems);
+    // Updating total and total items
     total -= item.getPrice();
     totalItems -= 1;
     setCart([...cart, total]);
   };
 
+  // Finding what mall the item is in
   const findStore = (item) => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
+    // Going through each mall object and finding what index the item is in and then returning the name of the mall
     for (let i = 0; i < malls.length; i++) {
       const index = malls[i].itemList.indexOf(item);
       if (index !== -1) {
@@ -64,20 +72,24 @@ function Cart() {
 
   // Create a function that has a pop up that says test
   const displayAlert = (items) => {
-    alert("This is a simulation of a shopping mall created for a project. \n\nThis simulation is created by Nishit, Brayden, Afnan, Vansh, Chris, and Reihan \n\nYou have purchased " + totalItems + " items. \n\nYour total is " + total.toFixed(2) + "\n\nThank you for shopping with us!");
+    alert("This is a simulation of a shopping mall created for a project. \n\nThis simulation is created by Nishit, Brayden, Afnan, Vansh, Chris, and Reihan \n\nYou have purchased " + totalItems + " items. \n\nYour total is $" + total.toFixed(2) + "\n\nThank you for shopping with us!");
   };
 
+  // Sort his items alphabetically
   const sortItemsAlphabetically = (items) => {
     return items.sort((a, b) => a.getName().localeCompare(b.getName()));
   };
 
   const displayItems = () => {
+    // Getting all of the items from the malls
     const malls = [Mall1, Mall2, Mall3, Mall4];
     const items = malls.flatMap((mall) => mall.itemList);
 
+    // Sorting the items alphabetically
     const sortedItems = sortItemsAlphabetically(items);
   
     const rows = [];
+    // Creating rows of 4 items
     for (let i = 0; i < sortedItems.length; i += 4) {
       const rowItems = sortedItems.slice(i, i + 4);
       rows.push(rowItems);
@@ -85,11 +97,13 @@ function Cart() {
   
     return (
       <div className="cart-item-list">
+        {/* Iterating through the rows and then the items in the rows */}
         {rows.map((row, rowIndex) => (
           <div key={rowIndex} className="cart-item-row">
             {row.map((item, itemIndex) => (
               <div key={itemIndex} className="cart-item">
 
+                {/* Displaying the image of the item */}
                 {item.getName() === "Gucci Belt" && <img src={GucciBeltImage} alt={`Gucci Belt`} className="cart-item-image" />}
                 {item.getName() === "Gucci Bucket Hat" && <img src={GucciHatImage} alt={`Gucci Bucket Hat`} className="cart-item-image" />}
                 {item.getName() === "Gucci Shoes" && <img src={GucciShoesImage} alt={`Gucci Shoes`} className="cart-item-image" />}

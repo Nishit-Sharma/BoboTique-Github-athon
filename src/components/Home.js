@@ -19,6 +19,7 @@ function Home() {
     <animated.div style={props}>
       <Layout>
         
+        {/* Linking to all of the stores */}
         <div className="Home">
           <h1>Welcome to our shopping website!</h1>
           <p>Choose from our four stores and start shopping:</p>
