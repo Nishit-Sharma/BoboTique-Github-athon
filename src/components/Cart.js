@@ -56,13 +56,19 @@ function Cart() {
     }
   };
 
+  const sortItemsAlphabetically = (items) => {
+    return items.sort((a, b) => a.getName().localeCompare(b.getName()));
+  };
+
   const displayItems = () => {
     const malls = [Mall1, Mall2, Mall3, Mall4];
     const items = malls.flatMap((mall) => mall.itemList);
+
+    const sortedItems = sortItemsAlphabetically(items);
   
     const rows = [];
-    for (let i = 0; i < items.length; i += 4) {
-      const rowItems = items.slice(i, i + 4);
+    for (let i = 0; i < sortedItems.length; i += 4) {
+      const rowItems = sortedItems.slice(i, i + 4);
       rows.push(rowItems);
     }
   
