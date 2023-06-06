@@ -62,6 +62,11 @@ function Cart() {
     }
   };
 
+  // Create a function that has a pop up that says test
+  const displayAlert = (items) => {
+    alert("This is a simulation of a shopping mall created for a project. \n\nThis simulation is created by Nishit, Brayden, Afnan, Vansh, Chris, and Reihan \n\nYou have purchased " + items + " items. \n\nThank you for shopping with us!");
+  };
+
   const sortItemsAlphabetically = (items) => {
     return items.sort((a, b) => a.getName().localeCompare(b.getName()));
   };
@@ -131,7 +136,7 @@ function Cart() {
           <h2 className="cart-heading">Shopping Cart</h2>
           {displayItems()}
           <p className="cart-total">Total: ${total.toFixed(2)}</p>
-          <button className="cart-checkout-button">Checkout</button>
+          <button className="cart-checkout-button" onClick={() => displayAlert()}>Checkout</button>
         </div>
       </Layout>
     </animated.div>
