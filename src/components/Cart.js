@@ -71,7 +71,7 @@ function Cart() {
   };
 
   // Create a function that has a pop up that says test
-  const displayAlert = (items) => {
+  const displayAlert = () => {
     alert("This is a simulation of a shopping mall created for a project. \n\nThis simulation is created by Nishit, Brayden, Afnan, Vansh, Chris, and Reihan \n\nYou have purchased " + totalItems + " items. \n\nYour total is $" + total.toFixed(2) + "\n\nThank you for shopping with us!");
   };
 
